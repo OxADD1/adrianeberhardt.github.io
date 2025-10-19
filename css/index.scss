@@ -1,0 +1,232 @@
+// ================================
+// Variablen
+// ================================
+$primary: #fed136;                      // Hauptfarbe
+$header-jumbotron-height: 200px;        // Basis-Höhe für den Jumbotron
+$section-padding: 120px;                // Abstand oben/unten für Sektionen
+$section-color-alternate: #f7f7f7;      // Wechselhintergrundfarbe
+$page-menu-size: 175px;                 // Breite des Seitenmenüs
+
+// ================================
+// Bootstrap import
+// ================================
+@import "../lib/bootstrap/scss/bootstrap";
+
+// ================================
+// Globales Hover-Verhalten für Links
+// ================================
+a {
+  &:hover {
+    cursor: pointer;  // Zeigt die Hand, wenn über einen Link gehovert wird
+  }
+}
+
+// ================================
+// Page Header
+// ================================
+.page-header {
+  background-image: url("../images/web1.jpg");
+  background-size: cover;               // Bild skalieren, damit es den Container ausfüllt
+  background-repeat: no-repeat;         // Kein Wiederholen
+  background-position: 50% 0%;          // Zentriert horizontal, oben abgeschnitten
+}
+
+// ================================
+// Navbar Brand / Logo
+// ================================
+.navbar-brand {
+  padding-top: 0.2rem;
+  color: $primary;
+  font-style: italic;
+}
+
+#logo {
+  padding-bottom: 4px;
+  margin: 0;
+  width: 30px;                          // Bildbreite
+  height: auto;                         // Seitenverhältnis beibehalten
+  margin-right: 0.5rem;                 // Abstand zwischen Bild und Text
+  vertical-align: middle;               // Vertikale Zentrierung
+  display: inline-block;                // In einer Zeile mit Text darstellen
+}
+
+// ================================
+// Responsive Anpassungen Logo & Branding
+// ================================
+@media (max-width: 768px) {
+  // Für Tablets und kleinere Geräte
+  #logo {
+    width: 25px;                        // Etwas kleinere Logo-Größe
+  }
+  .navbar-brand {
+    font-size: 1.2rem;                  // Kleinere Schrift
+  }
+
+  @media (max-width: 576px) {
+    // Für Mobiltelefone
+    #logo {
+      width: 20px;                      // Noch kleinere Logo-Größe
+    }
+    .navbar-brand {
+      font-size: 1rem;                  // Noch kleinere Schrift
+    }
+  }
+}
+
+// ================================
+// Header Jumbotron
+// ================================
+.header-jumbotron {
+  color: white;
+  padding-top: 0;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  height: $header-jumbotron-height;     // Basis-Höhe
+
+  @include media-breakpoint-up(sm) {
+    height: $header-jumbotron-height + 50px;   // +50px ab sm (≥576px)
+  }
+  @include media-breakpoint-up(md) {
+    height: $header-jumbotron-height + 100px;  // +100px ab md (≥768px)
+  }
+  @include media-breakpoint-up(lg) {
+    height: $header-jumbotron-height + 150px;  // +150px ab lg (≥992px)
+  }
+
+  h2 {
+    font-style: italic;
+    margin-bottom: 0;
+  }
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+// ================================
+// Vorteile-Sektion
+// ================================
+.vorteile {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  .vorteile-symbol {
+    border: 2px solid $primary;
+    font-size: 2rem;
+    line-height: 3.75rem;
+    color: $primary;
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;                 // Kreisform
+    margin: 0 auto 0.75rem auto;        // zentriert + Abstand unten
+  }
+}
+
+// ================================
+// Überblick-Sektion
+// ================================
+.ueberblick {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  background-color: $section-color-alternate;
+}
+
+// ================================
+// Kontakt-Sektion
+// ================================
+.contact {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  background-image: url('../images/contact-background-compressed.png');
+  background-size: cover;               // Bild füllt den Bereich aus
+  background-position: center;          // Bild zentriert
+  color: white;
+
+  p {
+    color: grey;                        // Grauer Text für Paragraphen
+  }
+
+  a {
+    &:hover {
+      cursor: pointer;                  // Hand-Cursor auf Link-Hover
+    }
+  }
+
+  .contact-message {
+    height: 6%;
+
+    @include media-breakpoint-up(sm) {
+      height: 100%;                     // Volle Höhe ab sm-Breakpoint
+    }
+  }
+}
+
+// ================================
+// Footer
+// ================================
+.footer {
+  .footer-links {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin: 0.2rem;
+
+    &:hover {
+      color: grey;                      // Grau beim Hover
+      text-decoration: none;
+      cursor: pointer;                  // Hand-Cursor beim Hover
+    }
+  }
+}
+
+// ================================
+// Page Menu & Body Overflow
+// ================================
+body,
+html {
+  overflow-x: hidden;                   // Kein horizontaler Scroll
+}
+
+#page {
+  position: relative;
+  left: 0;
+  transition: 1s all;                   // Animation für Öffnen/Schließen
+  transform: translate(0, 0);
+
+  &.mobile-nav-opened {
+    transform: translate(-$page-menu-size, 0);  // Seitenmenü ausfahren
+  }
+
+  .mobile-nav {
+    background-color: $section-color-alternate;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -$page-menu-size;           // außerhalb des Bildschirms starten
+    width: $page-menu-size;
+  }
+
+  .mobile-nav-link {
+    color: black;
+    border-right: 0 solid transparent;
+    border-left: 0 solid transparent;
+    background-color: $section-color-alternate;
+
+    &:first-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &:last-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+// ================================
+// Utility-Klasse
+// ================================
+.d-i {
+  padding: 10px;                         // Einfacher Abstand
+}
