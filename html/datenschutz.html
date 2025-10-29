@@ -1,112 +1,41 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Datenschutzerklärung für die Website von Adrian Eberhardt">
-  <title>Adrian Eberhardt | Datenschutz</title>
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- FontAwesome für Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    :root {
-      --primary: #fed136;
-      --dark-gray: #343a40;
-      --light-gray: #f7f7f7;
-    }
-    
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-    }
-    
-    .navbar-brand {
-      color: var(--primary);
-      font-style: italic;
-    }
-    
-    .text-primary {
-      color: var(--primary) !important;
-    }
-    
-    .datenschutz-header {
-      background-color: var(--dark-gray);
-      color: white;
-      padding: 80px 0;
-    }
-    
-    .section-padding {
-      padding: 60px 0;
-    }
-    
-    footer {
-      padding: 30px 0;
-      background-color: var(--dark-gray);
-      color: white;
-    }
-    
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-    
-    footer a:hover {
-      color: var(--primary);
-    }
-    
-    h2.datenschutz-title {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 0.5rem;
-    }
-    
-    main {
-      padding: 40px 0;
-    }
-    
-    .datenschutz-section {
-      margin-bottom: 40px;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="https://oxadd1.github.io/adrianeberhardt.github.io/">Adrian Eberhardt</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Startseite</a>
-          </li>
-        </ul>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Datenschutzerklärung für die Website von Adrian Eberhardt">
+    <title>Adrian Eberhardt | Datenschutz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="../css/legal.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../index.html">
+          <img src="../images/logo.png" alt="Logo Adrian Eberhardt">
+          <span>Adrian Eberhardt</span>
+        </a>
+        <nav class="legal-nav" aria-label="Sekundärnavigation">
+          <a href="../index.html">Startseite</a>
+          <a href="./impressum.html">Impressum</a>
+        </nav>
       </div>
-    </div>
-  </nav>
+    </header>
 
-  <!-- Datenschutz Header -->
-  <section class="datenschutz-header">
-    <div class="container text-center">
-      <h1 class="display-4">Datenschutzerklärung</h1>
-      <p class="lead"><span class="text-primary">Informationen zum Schutz Ihrer Daten</span></p>
-    </div>
-  </section>
+    <section class="legal-hero">
+      <div class="container">
+        <h1>Datenschutzerklärung</h1>
+        <p>Informationen zum Schutz Ihrer Daten</p>
+      </div>
+    </section>
 
-  <!-- Hier kommt der Hauptinhalt der Datenschutzerklärung -->
-  <main>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-            <h1>Datenschutz&shy;erkl&auml;rung</h1>
+    <main>
+      <div class="container">
+        <article class="legal-card">
+<h1>Datenschutz&shy;erkl&auml;rung</h1>
             <h2>1. Datenschutz auf einen Blick</h2>
             <h3>Allgemeine Hinweise</h3>
             <p>Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen
@@ -373,25 +302,18 @@
             <p>Die erhobenen Kundendaten werden nach Abschluss des Auftrags oder Beendigung der Gesch&auml;ftsbeziehung
                 und Ablauf der ggf. bestehenden gesetzlichen Aufbewahrungsfristen gel&ouml;scht. Gesetzliche
                 Aufbewahrungsfristen bleiben unber&uuml;hrt.</p>
-            </main>
+        </article>
+      </div>
+    </main>
 
-            <!-- Footer -->
-            <footer>
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-6 text-center text-md-start">
-                    <p>&copy; 2025 Adrian Eberhardt</p>
-                  </div>
-                  <div class="col-md-6 text-center text-md-end">
-                    <a href="impressum.html" class="me-3">Impressum</a>
-                    <a href="#" class="me-3">Datenschutz</a>
-                  </div>
-                </div>
-              </div>
-            </footer>
-          
-            <!-- Bootstrap JS -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-          </body>
-          
-          </html>
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 Adrian Eberhardt</p>
+        <div class="footer-links">
+          <a href="./impressum.html">Impressum</a>
+          <a href="./datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
