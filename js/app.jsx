@@ -35,8 +35,7 @@ const PROJECTS = [
       "Eine iOS-App für tägliche Reflexionen, Stimmungsverfolgung und persönliches Wachstum – aktuell in Entwicklung mit iCloud-Sync für iPhone, iPad und Mac.",
     image: "./images/Reflectric-logo.png",
     href: "https://oxadd1.github.io/reflectric/",
-    linkText: "Mehr Informationen zu Reflectric",
-    status: "Beta"
+    linkText: "Mehr Informationen zu Reflectric"
   },
   {
     title: "Chez Muna & Lucien",
