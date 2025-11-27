@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Adrian Eberhardt - iOS-Entwicklung & Webentwicklung. Entdecken Sie meine Projekte und Expertise.">
-  
-      <!-- CANONICAL TAG HINZUFÜGEN -->
+
+  <!-- CANONICAL TAG HINZUFÜGEN -->
   <link rel="canonical" href="https://oxadd1.github.io/adrianeberhardt.github.io/">
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/android-chrome-512x512.png">
   <link rel="manifest" href="./images/favicon/site.webmanifest">
   <meta name="theme-color" content="#ffffff">
-  
+
   <title>Adrian Eberhardt | iOS & Web Entwicklung</title>
   <link rel="stylesheet" type="text/css" href="./css/index.min.css">
   <style>
@@ -27,7 +27,21 @@
       position: relative;
     }
 
+    /* Hover effect for project cards ONLY (not expertise cards) */
+    .card:not(.expertise-card) {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
 
+    .card:not(.expertise-card):hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Add padding to top of card images */
+    .card-img-top {
+      padding-top: 20px;
+    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -87,14 +101,24 @@
         <!-- Icons, Überschriften und kürzere Beschreibungen -->
         <div class="row justify-content-center mb-5">
           <div class="col-sm-4">
-            <div class="vorteile-symbol"><i class="fa-brands fa-apple"></i></div>
-            <h4 class="text-center">iOS-Entwicklung</h4>
-            <p class="text-center text-muted"><em>Apps für iPhone, iPad und Mac</em></p>
+            <div class="card h-100 expertise-card">
+              <div class="card-body text-center">
+                <div class="vorteile-symbol"><i class="fa-brands fa-apple"></i></div>
+                <h4>iOS-Entwicklung</h4>
+                <p class="text-muted"><em>Apps für iPhone, iPad und Mac – von der Konzeption über UI/UX bis zur
+                    Veröffentlichung im App Store, inklusive Testing und langfristiger Betreuung.</em></p>
+              </div>
+            </div>
           </div>
           <div class="col-sm-4">
-            <div class="vorteile-symbol"><i class="fa-solid fa-code"></i></div>
-            <h4 class="text-center">Webentwicklung</h4>
-            <p class="text-center text-muted"><em>Moderne, responsive Websites</em></p>
+            <div class="card h-100 expertise-card">
+              <div class="card-body text-center">
+                <div class="vorteile-symbol"><i class="fa-solid fa-code"></i></div>
+                <h4>Webentwicklung</h4>
+                <p class="text-muted"><em>Moderne, responsive Websites und Web-Apps – optimiert für Performance,
+                    Barrierefreiheit und eine klare Markenbotschaft auf allen Geräten.</em></p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -128,7 +152,9 @@
             <div class="card h-100 mb-4 mt-4 shadow-sm">
               <div style="height: 240px;" class="overflow-hidden bg-light d-flex align-items-center project-hero">
 
-                <img src="./images/Reflectric-logo.png" class="card-img-top" style="object-fit: contain; max-height: 100%; width: auto; max-width: 100%; margin: 0 auto;" alt="Reflectric iOS App">
+                <img src="./images/Reflectric-logo.png" class="card-img-top"
+                  style="object-fit: contain; max-height: 100%; width: auto; max-width: 100%; margin: 0 auto;"
+                  alt="Reflectric iOS App">
               </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-center mb-4 mt-2">Reflectric</h5>
@@ -136,7 +162,8 @@
                   Eine iOS-App für tägliche Reflexionen, Stimmungsverfolgung und persönliches Wachstum.
                   Mit iCloud-Sync für iPhone, iPad und Mac.
                 </p>
-                <a href="https://oxadd1.github.io/reflectric/" class="stretched-link" target="_blank" aria-label="Mehr Informationen zu Reflectric"></a>
+                <a href="https://oxadd1.github.io/reflectric/" class="stretched-link" target="_blank"
+                  aria-label="Mehr Informationen zu Reflectric"></a>
               </div>
             </div>
           </div>
@@ -145,7 +172,9 @@
           <div class="col-12 col-sm-6 col-md-4">
             <div class="card h-100 mb-4 mt-4 shadow-sm">
               <div style="height: 240px;" class="overflow-hidden bg-light d-flex align-items-center">
-                <img src="./images/CashProtector-logo.png" class="card-img-top" style="object-fit: contain; max-height: 100%; width: auto; max-width: 100%; margin: 0 auto;" alt="iOS App für Finanzen">
+                <img src="./images/CashProtector-logo.png" class="card-img-top"
+                  style="object-fit: contain; max-height: 100%; width: auto; max-width: 100%; margin: 0 auto;"
+                  alt="iOS App für Finanzen">
               </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-center mb-4 mt-2">CashCounter</h5>
@@ -153,7 +182,8 @@
                   Eine intuitive iOS-Anwendung zum Verfolgen persönlicher Einnahmen und Ausgaben.
                   Mit Diagrammen und Exportfunktionen für einfache Finanzverwaltung.
                 </p>
-                <a href="https://oxadd1.github.io/cashcounter/" class="stretched-link" target="_blank" aria-label="Mehr Informationen zu Finanz-Tracker"></a>
+                <a href="https://oxadd1.github.io/cashcounter/" class="stretched-link" target="_blank"
+                  aria-label="Mehr Informationen zu Finanz-Tracker"></a>
               </div>
             </div>
           </div>
@@ -162,7 +192,9 @@
           <div class="col-12 col-sm-6 col-md-4">
             <div class="card h-100 mb-4 mt-4 shadow-sm">
               <div style="height: 240px;" class="overflow-hidden bg-light d-flex align-items-center">
-                <img src="./images/bnb.jpeg" class="card-img-top" style="object-fit: contain; max-height: 100%; width: auto; max-width: 100%; margin: 0 auto;" alt="WordPress Website für ein Bed & Breakfast">
+                <img src="./images/bnb.jpeg" class="card-img-top"
+                  style="object-fit: contain; max-height: 100%; width: auto; max-width: 100%; margin: 0 auto;"
+                  alt="WordPress Website für ein Bed & Breakfast">
               </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-center mb-4 mt-2"> Chez Muna & Lucien <br>
@@ -170,7 +202,8 @@
                 <p class="card-text text-center flex-grow-1">
                   Eine maßgeschneiderte Website für ein Bed & Breakfast in Thun.
                 </p>
-                <a href="https://chezmunalucien.com/" class="stretched-link" target="_blank" aria-label="Projekt Chez Muna & Lucien ansehen"></a>
+                <a href="https://chezmunalucien.com/" class="stretched-link" target="_blank"
+                  aria-label="Projekt Chez Muna & Lucien ansehen"></a>
               </div>
             </div>
           </div>
@@ -233,4 +266,5 @@
   <script type="text/javascript" src="./js/index.js" defer></script>
 
 </body>
+
 </html>
