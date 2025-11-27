@@ -54,11 +54,11 @@
   <div id="page" class="">
 
     <nav class="mobile-nav list-group">
-      <a class="mobile-nav-link list-group-item list-group-item-action" aria-current="page" href="#">Startseite</a>
+      <a class="mobile-nav-link list-group-item list-group-item-action" aria-current="page" href="#" data-i18n="nav.home">Startseite</a>
       <a class="mobile-nav-link list-group-item list-group-item-action" aria-current="page"
-        href="#vorteile">Expertise</a>
-      <a class="mobile-nav-link list-group-item list-group-item-action" href="#ueberblick">Projekte</a>
-      <a class="mobile-nav-link list-group-item list-group-item-action" href="#contact">Kontakt</a>
+        href="#vorteile" data-i18n="nav.expertise">Expertise</a>
+      <a class="mobile-nav-link list-group-item list-group-item-action" href="#ueberblick" data-i18n="nav.projects">Projekte</a>
+      <a class="mobile-nav-link list-group-item list-group-item-action" href="#contact" data-i18n="nav.contact">Kontakt</a>
     </nav>
 
     <header class="page-header">
@@ -66,26 +66,42 @@
         <nav class="navbar navbar-expand-md navbar-dark">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="./images/logo.png" id="logo" alt="logo">Adrian Eberhardt</a>
-            <button id="toggle-mobile-nav" class="navbar-toggler" type="button" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="navbar-right-controls d-flex align-items-center">
+              <!-- Language Switcher -->
+              <div class="dropdown language-switcher me-2">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <span class="current-lang-label">🇩🇪</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item language-btn active" href="#" data-lang="de">🇩🇪 Deutsch</a></li>
+                  <li><a class="dropdown-item language-btn" href="#" data-lang="en">🇬🇧 English</a></li>
+                </ul>
+              </div>
+
+              <button id="toggle-mobile-nav" class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Startseite</a>
-                <a class="nav-link active" aria-current="page" href="#vorteile">Expertise</a>
-                <a class="nav-link" href="#ueberblick">Projekte</a>
-                <a class="nav-link" href="#contact">Kontakt</a>
+                <a class="nav-link active" aria-current="page" href="#" data-i18n="nav.home">Startseite</a>
+                <a class="nav-link active" aria-current="page" href="#vorteile" data-i18n="nav.expertise">Expertise</a>
+                <a class="nav-link" href="#ueberblick" data-i18n="nav.projects">Projekte</a>
+                <a class="nav-link" href="#contact" data-i18n="nav.contact">Kontakt</a>
               </div>
             </div>
           </div>
         </nav>
         <div
           class="container text-center header-jumbotron d-flex flex-column justify-content-center align-items-center">
-          <h2 class="display-6">Herzlich Willkommen!</h2>
+          <h2 class="display-6" data-i18n="hero.welcome">Herzlich Willkommen!</h2>
           <div class="col-lg-6 mx-auto">
             <h1 class="display-5" style="color: #fed136;">Adrian Eberhardt</h1>
-            <p class="lead mb-4">iOS-Entwicklung • Web-Entwicklung</p>
-            <a class="btn btn-primary" href="#contact" role="button">Kontaktieren Sie mich</a>
+            <p class="lead mb-4" data-i18n="hero.subtitle">iOS-Entwicklung • Web-Entwicklung</p>
+            <a class="btn btn-primary" href="#contact" role="button" data-i18n="hero.cta">Kontaktieren Sie mich</a>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             </div>
           </div>
@@ -95,8 +111,8 @@
 
     <section class="vorteile" id="vorteile">
       <div class="container">
-        <h3 class="text-center">Meine Expertise</h3>
-        <p class="text-center text-muted mb-5"><em>Maßgeschneiderte digitale Lösungen</em></p>
+        <h3 class="text-center" data-i18n="expertise.title">Meine Expertise</h3>
+        <p class="text-center text-muted mb-5"><em data-i18n="expertise.subtitle">Maßgeschneiderte digitale Lösungen</em></p>
 
         <!-- Icons, Überschriften und kürzere Beschreibungen -->
         <div class="row justify-content-center mb-5">
@@ -104,8 +120,8 @@
             <div class="card h-100 expertise-card">
               <div class="card-body text-center">
                 <div class="vorteile-symbol"><i class="fa-brands fa-apple"></i></div>
-                <h4>iOS-Entwicklung</h4>
-                <p class="text-muted"><em>Apps für iPhone, iPad und Mac – von der Konzeption über UI/UX bis zur
+                <h4 data-i18n="expertise.ios.title">iOS-Entwicklung</h4>
+                <p class="text-muted"><em data-i18n="expertise.ios.desc">Apps für iPhone, iPad und Mac – von der Konzeption über UI/UX bis zur
                     Veröffentlichung im App Store, inklusive Testing und langfristiger Betreuung.</em></p>
               </div>
             </div>
@@ -114,8 +130,8 @@
             <div class="card h-100 expertise-card">
               <div class="card-body text-center">
                 <div class="vorteile-symbol"><i class="fa-solid fa-code"></i></div>
-                <h4>Webentwicklung</h4>
-                <p class="text-muted"><em>Moderne, responsive Websites und Web-Apps – optimiert für Performance,
+                <h4 data-i18n="expertise.web.title">Webentwicklung</h4>
+                <p class="text-muted"><em data-i18n="expertise.web.desc">Moderne, responsive Websites und Web-Apps – optimiert für Performance,
                     Barrierefreiheit und eine klare Markenbotschaft auf allen Geräten.</em></p>
               </div>
             </div>
@@ -126,7 +142,7 @@
         <div class="row justify-content-center mt-4">
           <div class="col-md-8">
             <blockquote class="blockquote text-center">
-              <p class="mb-4">"In einer Welt, in der Technologie ständig neue Grenzen überschreitet, liegt der wahre
+              <p class="mb-4" data-i18n="expertise.quote">"In einer Welt, in der Technologie ständig neue Grenzen überschreitet, liegt der wahre
                 Wert nicht nur im Code selbst, sondern in der kreativen Verbindung zwischen menschlicher Innovation und
                 digitalen Möglichkeiten."</p>
               <footer class="blockquote-footer mt-2">Adrian Eberhardt</footer>
@@ -138,9 +154,9 @@
 
     <section class="ueberblick" id="ueberblick">
       <div class="container">
-        <h3 class="text-center">Meine Projekte</h3>
+        <h3 class="text-center" data-i18n="projects.title">Meine Projekte</h3>
         <p class="text-center text-muted mb-5 mt-5">
-          <em>Entdecken Sie eine Auswahl meiner aktuellen Projekte!<br>
+          <em data-i18n="projects.subtitle">Entdecken Sie eine Auswahl meiner aktuellen Projekte!<br>
             Von praktischen Web-Anwendungen bis hin zu benutzerfreundlichen mobilen Apps - hier sehen Sie,
             wie ich Technologie einsetze, um alltagstaugliche Lösungen zu schaffen.</em>
         </p>
@@ -158,10 +174,13 @@
               </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-center mb-4 mt-2">Reflectric</h5>
-                <p class="card-text text-center flex-grow-1">
+                <p class="card-text text-center flex-grow-1" data-i18n="projects.reflectric.desc">
                   Eine iOS-App für tägliche Reflexionen, Stimmungsverfolgung und persönliches Wachstum.
                   Mit iCloud-Sync für iPhone, iPad und Mac.
                 </p>
+                <div class="text-center mt-3">
+                  <span class="btn btn-sm btn-outline-primary" data-i18n="projects.learn_more">Mehr erfahren →</span>
+                </div>
                 <a href="https://oxadd1.github.io/reflectric/" class="stretched-link" target="_blank"
                   aria-label="Mehr Informationen zu Reflectric"></a>
               </div>
@@ -178,10 +197,13 @@
               </div>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-center mb-4 mt-2">CashCounter</h5>
-                <p class="card-text text-center flex-grow-1">
+                <p class="card-text text-center flex-grow-1" data-i18n="projects.cashcounter.desc">
                   Eine intuitive iOS-Anwendung zum Verfolgen persönlicher Einnahmen und Ausgaben.
                   Mit Diagrammen und Exportfunktionen für einfache Finanzverwaltung.
                 </p>
+                <div class="text-center mt-3">
+                  <span class="btn btn-sm btn-outline-primary" data-i18n="projects.learn_more">Mehr erfahren →</span>
+                </div>
                 <a href="https://oxadd1.github.io/cashcounter/" class="stretched-link" target="_blank"
                   aria-label="Mehr Informationen zu Finanz-Tracker"></a>
               </div>
@@ -197,11 +219,14 @@
                   alt="WordPress Website für ein Bed & Breakfast">
               </div>
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center mb-4 mt-2"> Chez Muna & Lucien <br>
+                <h5 class="card-title text-center mb-4 mt-2" data-i18n="projects.bnb.title"> Chez Muna & Lucien <br>
                   Bed and Breakfast in Thun</h5>
-                <p class="card-text text-center flex-grow-1">
+                <p class="card-text text-center flex-grow-1" data-i18n="projects.bnb.desc">
                   Eine maßgeschneiderte Website für ein Bed & Breakfast in Thun.
                 </p>
+                <div class="text-center mt-3">
+                  <span class="btn btn-sm btn-outline-primary" data-i18n="projects.visit_website">Zur Website →</span>
+                </div>
                 <a href="https://chezmunalucien.com/" class="stretched-link" target="_blank"
                   aria-label="Projekt Chez Muna & Lucien ansehen"></a>
               </div>
@@ -217,10 +242,13 @@
                   alt="Beispiel Imbiss Website">
               </div>
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center mb-4 mt-2">Burger Imbiss Website</h5>
-                <p class="card-text text-center flex-grow-1">
+                <h5 class="card-title text-center mb-4 mt-2" data-i18n="projects.burger.title">Burger Imbiss Website</h5>
+                <p class="card-text text-center flex-grow-1" data-i18n="projects.burger.desc">
                   Eine moderne, responsive Website für einen Burger-Imbiss mit Online-Bestellfunktion via WhatsApp.
                 </p>
+                <div class="text-center mt-3">
+                  <span class="btn btn-sm btn-outline-primary" data-i18n="projects.visit_website">Zur Website →</span>
+                </div>
                 <a href="https://oxadd1.github.io/beispiel-imbiss/" class="stretched-link" target="_blank"
                   aria-label="Beispiel Imbiss Website ansehen"></a>
               </div>
@@ -236,27 +264,27 @@
 
     <section class="contact" id="contact">
       <div class="container">
-        <h3 class="text-center">Kontakt</h3>
-        <p class="text-center"><em>Haben Sie Fragen? Kontaktieren Sie mich gerne!</em></p>
+        <h3 class="text-center" data-i18n="contact.title">Kontakt</h3>
+        <p class="text-center"><em data-i18n="contact.subtitle">Haben Sie Fragen? Kontaktieren Sie mich gerne!</em></p>
 
         <div class="row">
           <div class="col-12 col-md-6 offset-md-2">
-            <h4>Name</h4>
+            <h4 data-i18n="contact.name">Name</h4>
             <p><span style="color: #fed136;">Adrian Eberhardt</span></p>
             <h4>Email</h4>
             <p><a href="mailto:info.adrianeberhardt@gmail.com">info.adrianeberhardt@gmail.com</a></p>
           </div>
           <div class="col-12 col-md-4">
-            <h4>Telefon</h4>
+            <h4 data-i18n="contact.phone">Telefon</h4>
             <p><a href="tel:+4915123676333">+4915123676333</a></p>
-            <h4>Adresse</h4>
+            <h4 data-i18n="contact.address">Adresse</h4>
             <p><a href="https://maps.google.com/?q=Strohdorfer+Str.+16,+72488+Sigmaringen,+Germany"
                 target="_blank">Strohdorfer Str. 16 <br>72488 Sigmaringen</a></p>
           </div>
         </div>
 
         <div class="text-center mt-3">
-          <a href="https://wa.me/+4915123676333" target="_blank" class="btn btn-primary">Schreiben Sie mir auf
+          <a href="https://wa.me/+4915123676333" target="_blank" class="btn btn-primary" data-i18n="contact.whatsapp">Schreiben Sie mir auf
             WhatsApp!</a>
         </div>
       </div>
@@ -271,9 +299,9 @@
           <div class="col-12 col-md-4 mt-md-3">
             <div class="d-flex justify-content-center mb-3">
               <a class="footer-links d-flex flex-column justify-content-center"
-                href="./html/impressum.html">Impressum</a>
+                href="./html/impressum.html" data-i18n="footer.imprint">Impressum</a>
               <a class="footer-links d-flex flex-column justify-content-center"
-                href="./html/datenschutz.html">Datenschutz</a>
+                href="./html/datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
             </div>
           </div>
         </div>

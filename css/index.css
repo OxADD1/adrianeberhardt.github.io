@@ -12141,4 +12141,65 @@ html {
 
 .d-i {
   padding: 10px;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/* Language Switcher Styles */
+.language-switcher {
+  position: relative;
+}
+
+.language-switcher .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.language-switcher .nav-link:hover {
+  color: #fed136;
+}
+
+.language-switcher .dropdown-menu {
+  background-color: #212529;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 160px;
+}
+
+.language-switcher .dropdown-item {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.language-switcher .dropdown-item:hover {
+  background-color: rgba(254, 209, 54, 0.2);
+  color: #fed136;
+}
+
+.language-switcher .dropdown-item.active {
+  background-color: rgba(254, 209, 54, 0.3);
+  color: #fed136;
+  font-weight: 500;
+}
+
+.current-lang-label {
+  font-size: 1.2rem;
+}
+
+.navbar-right-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Mobile responsiveness for language switcher */
+@media (max-width: 768px) {
+  .language-switcher {
+    margin-right: 0;
+  }
+
+  .navbar-right-controls {
+    margin-left: auto;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
