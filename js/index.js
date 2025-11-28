@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'contact.phone': 'Telefon',
       'contact.address': 'Adresse',
       'contact.whatsapp': 'Schreiben Sie mir auf WhatsApp!',
+      'contact.social': 'Folgen Sie mir',
+      'contact.social_subtitle': 'Bleiben Sie auf dem Laufenden über meine neuesten Projekte',
 
       // Footer
       'footer.imprint': 'Impressum',
@@ -86,6 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'contact.phone': 'Phone',
       'contact.address': 'Address',
       'contact.whatsapp': 'Message me on WhatsApp!',
+      'contact.social': 'Follow Me',
+      'contact.social_subtitle': 'Stay updated on my latest projects',
 
       // Footer
       'footer.imprint': 'Imprint',
