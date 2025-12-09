@@ -97,8 +97,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  // Set the language on page load (default to German)
-  let currentLang = 'de';
+  // Set the language on page load (default to English)
+  let currentLang = 'en';
 
   // Function to update content based on selected language
   function updateContent(lang) {
