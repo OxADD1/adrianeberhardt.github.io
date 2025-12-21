@@ -1,7 +1,7 @@
 // i18n.js - Internationalization Script for KA DataX
 (function () {
     const SUPPORTED_LANGS = ['de', 'en', 'tr'];
-    const DEFAULT_LANG = 'de';
+    const DEFAULT_LANG = 'en';
 
     let translations = {};
     let currentLang = localStorage.getItem('kadatax-lang') || DEFAULT_LANG;
