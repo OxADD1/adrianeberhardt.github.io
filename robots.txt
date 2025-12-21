@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oxadd1.github.io/adrianeberhardt.github.io/sitemap.xml
