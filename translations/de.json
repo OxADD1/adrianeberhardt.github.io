@@ -31,6 +31,9 @@
   "projects": {
     "title": "Meine Projekte",
     "subtitle": "Entdecken Sie eine Auswahl meiner aktuellen Projekte!<br>Von praktischen Web-Anwendungen bis hin zu benutzerfreundlichen mobilen Apps - hier sehen Sie, wie ich Technologie einsetze, um alltagstaugliche Lösungen zu schaffen.",
+    "kadatax": {
+      "desc": "Design und Entwicklung einer modernen Corporate Website mit interaktiven 3D-Elementen."
+    },
     "reflectric": {
       "desc": "Eine iOS-App für tägliche Reflexionen, Stimmungsverfolgung und persönliches Wachstum. Mit iCloud-Sync für iPhone, iPad und Mac."
     },
