@@ -1,0 +1,65 @@
+{
+    "nav": {
+        "home": "Home",
+        "expertise": "Expertise",
+        "projects": "Projects",
+        "contact": "Contact",
+        "services": "Services",
+        "about": "About Me"
+    },
+    "hero": {
+        "welcome": "Welcome!",
+        "subtitle": "iOS Development • Web Development",
+        "cta": "Contact Me",
+        "headline1": "Understand Data.",
+        "headline2": "Improve Decisions.",
+        "headline3": "Shape Future."
+    },
+    "expertise": {
+        "title": "My Expertise",
+        "subtitle": "Tailored Digital Solutions",
+        "ios": {
+            "title": "iOS Development",
+            "desc": "Apps for iPhone, iPad, and Mac – from conception through UI/UX to App Store publication, including testing and long-term support."
+        },
+        "web": {
+            "title": "Web Development",
+            "desc": "Modern, responsive websites and web apps – optimized for performance, accessibility, and a clear brand message across all devices."
+        },
+        "quote": "\"In a world where technology constantly breaks new ground, true value lies not just in the code itself, but in the creative connection between human innovation and digital possibilities.\""
+    },
+    "projects": {
+        "title": "My Projects",
+        "subtitle": "Discover a selection of my current projects!<br>From practical web applications to user-friendly mobile apps - see how I use technology to create everyday solutions.",
+        "reflectric": {
+            "desc": "An iOS app for daily reflections, mood tracking, and personal growth. With iCloud sync for iPhone, iPad, and Mac."
+        },
+        "cashcounter": {
+            "desc": "An intuitive iOS application for tracking personal income and expenses. With charts and export features for easy financial management."
+        },
+        "bnb": {
+            "title": "Chez Muna & Lucien <br>Bed and Breakfast in Thun",
+            "desc": "A custom-designed website for a Bed & Breakfast in Thun."
+        },
+        "burger": {
+            "title": "Burger Restaurant Website",
+            "desc": "A modern, responsive website for a burger restaurant with online ordering via WhatsApp."
+        },
+        "learn_more": "Learn more →",
+        "visit_website": "Visit website →"
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Have questions? Feel free to contact me!",
+        "name": "Name",
+        "phone": "Phone",
+        "address": "Address",
+        "whatsapp": "Message me on WhatsApp!",
+        "social": "Follow Me",
+        "social_subtitle": "Stay updated on my latest projects"
+    },
+    "footer": {
+        "imprint": "Imprint",
+        "privacy": "Privacy Policy"
+    }
+}

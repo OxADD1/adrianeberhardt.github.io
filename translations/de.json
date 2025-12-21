@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "expertise": "Expertise",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "services": "Dienstleistungen",
+    "about": "Über mich"
+  },
+  "hero": {
+    "welcome": "Herzlich Willkommen!",
+    "subtitle": "iOS-Entwicklung • Web-Entwicklung",
+    "cta": "Kontaktieren Sie mich",
+    "headline1": "Daten verstehen.",
+    "headline2": "Entscheidungen verbessern.",
+    "headline3": "Zukunft gestalten."
+  },
+  "expertise": {
+    "title": "Meine Expertise",
+    "subtitle": "Maßgeschneiderte digitale Lösungen",
+    "ios": {
+      "title": "iOS-Entwicklung",
+      "desc": "Apps für iPhone, iPad und Mac – von der Konzeption über UI/UX bis zur Veröffentlichung im App Store, inklusive Testing und langfristiger Betreuung."
+    },
+    "web": {
+      "title": "Webentwicklung",
+      "desc": "Moderne, responsive Websites und Web-Apps – optimiert für Performance, Barrierefreiheit und eine klare Markenbotschaft auf allen Geräten."
+    },
+    "quote": "\"In einer Welt, in der Technologie ständig neue Grenzen überschreitet, liegt der wahre Wert nicht nur im Code selbst, sondern in der kreativen Verbindung zwischen menschlicher Innovation und digitalen Möglichkeiten.\""
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "subtitle": "Entdecken Sie eine Auswahl meiner aktuellen Projekte!<br>Von praktischen Web-Anwendungen bis hin zu benutzerfreundlichen mobilen Apps - hier sehen Sie, wie ich Technologie einsetze, um alltagstaugliche Lösungen zu schaffen.",
+    "reflectric": {
+      "desc": "Eine iOS-App für tägliche Reflexionen, Stimmungsverfolgung und persönliches Wachstum. Mit iCloud-Sync für iPhone, iPad und Mac."
+    },
+    "cashcounter": {
+      "desc": "Eine intuitive iOS-Anwendung zum Verfolgen persönlicher Einnahmen und Ausgaben. Mit Diagrammen und Exportfunktionen für einfache Finanzverwaltung."
+    },
+    "bnb": {
+      "title": "Chez Muna & Lucien <br>Bed and Breakfast in Thun",
+      "desc": "Eine maßgeschneiderte Website für ein Bed & Breakfast in Thun."
+    },
+    "burger": {
+      "title": "Burger Imbiss Website",
+      "desc": "Eine moderne, responsive Website für einen Burger-Imbiss mit Online-Bestellfunktion via WhatsApp."
+    },
+    "learn_more": "Mehr erfahren →",
+    "visit_website": "Zur Website →"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Haben Sie Fragen? Kontaktieren Sie mich gerne!",
+    "name": "Name",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "whatsapp": "Schreiben Sie mir auf WhatsApp!",
+    "social": "Folgen Sie mir",
+    "social_subtitle": "Bleiben Sie auf dem Laufenden über meine neuesten Projekte"
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  }
+}

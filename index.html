@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Adrian Eberhardt - iOS-Entwicklung & Webentwicklung. Entdecken Sie meine Projekte und Expertise.">
+  <meta name="theme-color" content="#050505">
 
-  <!-- CANONICAL TAG HINZUFÜGEN -->
+  <title>Adrian Eberhardt | iOS & Web Entwicklung</title>
+
+  <!-- Canonical Tag -->
   <link rel="canonical" href="https://oxadd1.github.io/adrianeberhardt.github.io/">
 
   <!-- Favicon -->
@@ -18,357 +21,350 @@
   <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/android-chrome-512x512.png">
   <link rel="manifest" href="./images/favicon/site.webmanifest">
-  <meta name="theme-color" content="#ffffff">
 
-  <title>Adrian Eberhardt | iOS & Web Entwicklung</title>
-  <link rel="stylesheet" type="text/css" href="./css/index.css">
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Three.js Import Map -->
+  <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/button.css">
+  <link rel="stylesheet" href="./css/startseite.css">
+  <link rel="stylesheet" href="./css/stars.css">
+  <link rel="stylesheet" href="./css/cube.css">
+  <link rel="stylesheet" href="./css/i18n.css">
+
   <style>
-    .project-hero {
-      position: relative;
+    /* Custom Overrides for Adrian's Portfolio */
+    :root {
+      --accent-color: #e87c0f;
+      /* Keeping Adrian's Orange or switching to Gold? Let's keep Orange for now as requested 'texts same', but user said 'complete design renewed'. Mockup uses Gold. I will use Gold to match Mockup as requested. */
+      --accent-color: #FFC107;
     }
 
-    /* Hover effect for project cards ONLY (not expertise cards) */
-    .card:not(.expertise-card) {
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Project Card Adjustments */
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
-    .card:not(.expertise-card):hover {
+    .project-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border-color: var(--accent-color);
     }
 
-    /* Add padding to top of card images */
-    .card-img-top {
-      padding-top: 20px;
-    }
-
-    /* Social Media Icons Styling */
-    .social-icon {
-      display: inline-flex;
+    .project-img-container {
+      height: 200px;
+      background: #222;
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #e87c0f;
-      font-size: 24px;
-      transition: all 0.3s ease;
-      text-decoration: none;
+      padding: 20px;
     }
 
-    .social-icon i {
-      color: #212529;
+    .project-img-container img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .project-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-media-links {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .social-icon {
+      font-size: 1.5rem;
+      color: white;
+      transition: color 0.3s;
     }
 
     .social-icon:hover {
-      transform: scale(1.2);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      background-color: #e87c0f;
-    }
-
-    .social-icon:hover i {
-      color: #fff;
+      color: var(--accent-color);
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
+  <!-- Fixed Star Background -->
+  <div id="stars-container"></div>
 
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <img src="./images/logo.png" alt="Adrian Eberhardt Logo" style="height: 40px;">
+      </a>
+      <nav class="nav-links hide-mobile">
+        <a href="#" data-i18n="nav.home">Startseite</a>
+        <a href="#vorteile" data-i18n="nav.expertise">Expertise</a>
+        <a href="#ueberblick" data-i18n="nav.projects">Projekte</a>
+        <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+      </nav>
 
+      <!-- Language Switcher -->
+      <div class="lang-switcher hide-mobile">
+        <span class="lang-switcher-current">🇩🇪 DE</span>
+        <div class="lang-dropdown">
+          <button class="lang-option" onclick="setLanguage('de')">🇩🇪 Deutsch</button>
+          <button class="lang-option" onclick="setLanguage('en')">🇬🇧 English</button>
+        </div>
+      </div>
 
-  <div id="page" class="">
+      <!-- Mobile Toggle -->
+      <button class="mobile-menu-btn" aria-label="Menü öffnen">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-    <nav class="mobile-nav list-group">
-      <a class="mobile-nav-link list-group-item list-group-item-action" aria-current="page" href="#"
-        data-i18n="nav.home">Startseite</a>
-      <a class="mobile-nav-link list-group-item list-group-item-action" aria-current="page" href="#vorteile"
-        data-i18n="nav.expertise">Expertise</a>
-      <a class="mobile-nav-link list-group-item list-group-item-action" href="#ueberblick"
-        data-i18n="nav.projects">Projekte</a>
-      <a class="mobile-nav-link list-group-item list-group-item-action" href="#contact"
-        data-i18n="nav.contact">Kontakt</a>
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <a href="#" class="overlay-logo">
+      <img src="./images/logo.png" alt="Logo">
+    </a>
+    <button class="close-menu-btn" aria-label="Menü schließen">&times;</button>
+    <nav class="mobile-nav">
+      <a href="#" data-i18n="nav.home">Startseite</a>
+      <a href="#vorteile" data-i18n="nav.expertise">Expertise</a>
+      <a href="#ueberblick" data-i18n="nav.projects">Projekte</a>
+      <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+      <div class="mobile-lang-switcher">
+        <button class="mobile-lang-btn" onclick="setLanguage('de')">🇩🇪 DE</button>
+        <button class="mobile-lang-btn" onclick="setLanguage('en')">🇬🇧 EN</button>
+      </div>
     </nav>
-
-    <header class="page-header">
-      <div class="container">
-        <nav class="navbar navbar-expand-md navbar-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="./images/logo.png" id="logo" alt="logo">Adrian Eberhardt</a>
-            <div class="navbar-right-controls d-flex align-items-center">
-              <!-- Language Switcher -->
-              <div class="dropdown language-switcher me-2">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  <span class="current-lang-label">🇬🇧</span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item language-btn" href="#" data-lang="de">🇩🇪 Deutsch</a></li>
-                  <li><a class="dropdown-item language-btn active" href="#" data-lang="en">🇬🇧 English</a></li>
-                </ul>
-              </div>
-
-              <button id="toggle-mobile-nav" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#" data-i18n="nav.home">Startseite</a>
-                <a class="nav-link active" aria-current="page" href="#vorteile" data-i18n="nav.expertise">Expertise</a>
-                <a class="nav-link" href="#ueberblick" data-i18n="nav.projects">Projekte</a>
-                <a class="nav-link" href="#contact" data-i18n="nav.contact">Kontakt</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-        <div
-          class="container text-center header-jumbotron d-flex flex-column justify-content-center align-items-center">
-          <h2 class="display-6" data-i18n="hero.welcome">Herzlich Willkommen!</h2>
-          <div class="col-lg-6 mx-auto">
-            <h1 class="display-5" style="color: #e87c0f;">Adrian Eberhardt</h1>
-            <p class="lead mb-4" data-i18n="hero.subtitle">iOS-Entwicklung • Web-Entwicklung</p>
-            <a class="btn btn-primary" href="#contact" role="button" data-i18n="hero.cta">Kontaktieren Sie mich</a>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="vorteile" id="vorteile">
-      <div class="container">
-        <h3 class="text-center" data-i18n="expertise.title">Meine Expertise</h3>
-        <p class="text-center text-muted mb-5"><em data-i18n="expertise.subtitle">Maßgeschneiderte digitale
-            Lösungen</em></p>
-
-        <!-- Icons, Überschriften und kürzere Beschreibungen -->
-        <div class="row justify-content-center mb-5">
-          <div class="col-sm-4">
-            <div class="card h-100 expertise-card">
-              <div class="card-body text-center">
-                <div class="vorteile-symbol"><i class="fa-brands fa-apple"></i></div>
-                <h4 data-i18n="expertise.ios.title">iOS-Entwicklung</h4>
-                <p class="text-muted"><em data-i18n="expertise.ios.desc">Apps für iPhone, iPad und Mac – von der
-                    Konzeption über UI/UX bis zur
-                    Veröffentlichung im App Store, inklusive Testing und langfristiger Betreuung.</em></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card h-100 expertise-card">
-              <div class="card-body text-center">
-                <div class="vorteile-symbol"><i class="fa-solid fa-code"></i></div>
-                <h4 data-i18n="expertise.web.title">Webentwicklung</h4>
-                <p class="text-muted"><em data-i18n="expertise.web.desc">Moderne, responsive Websites und Web-Apps –
-                    optimiert für Performance,
-                    Barrierefreiheit und eine klare Markenbotschaft auf allen Geräten.</em></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Zitat am Ende -->
-        <div class="row justify-content-center mt-4">
-          <div class="col-md-8">
-            <blockquote class="blockquote text-center">
-              <p class="mb-4" data-i18n="expertise.quote">"In einer Welt, in der Technologie ständig neue Grenzen
-                überschreitet, liegt der wahre
-                Wert nicht nur im Code selbst, sondern in der kreativen Verbindung zwischen menschlicher Innovation und
-                digitalen Möglichkeiten."</p>
-              <footer class="blockquote-footer mt-2">Adrian Eberhardt</footer>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ueberblick" id="ueberblick">
-      <div class="container">
-        <h3 class="text-center" data-i18n="projects.title">Meine Projekte</h3>
-        <p class="text-center text-muted mb-5 mt-5">
-          <em data-i18n="projects.subtitle">Entdecken Sie eine Auswahl meiner aktuellen Projekte!<br>
-            Von praktischen Web-Anwendungen bis hin zu benutzerfreundlichen mobilen Apps - hier sehen Sie,
-            wie ich Technologie einsetze, um alltagstaugliche Lösungen zu schaffen.</em>
-        </p>
-
-        <div class="row justify-content-center">
-
-          <!-- Karte 1: Reflectric iOS App -->
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 mb-4 mt-4 shadow-sm">
-              <div style="height: 240px;" class="overflow-hidden bg-light d-flex align-items-center project-hero">
-
-                <img src="./images/Reflectric-logo.png" class="card-img-top"
-                  style="object-fit: contain; max-height: 100%; width: auto; max-width: 100%; margin: 0 auto;"
-                  alt="Reflectric iOS App">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center mb-4 mt-2">Reflectric</h5>
-                <p class="card-text text-center flex-grow-1" data-i18n="projects.reflectric.desc">
-                  Eine iOS-App für tägliche Reflexionen, Stimmungsverfolgung und persönliches Wachstum.
-                  Mit iCloud-Sync für iPhone, iPad und Mac.
-                </p>
-                <div class="text-center mt-3">
-                  <span class="btn btn-sm btn-outline-primary" data-i18n="projects.learn_more">Mehr erfahren →</span>
-                </div>
-                <a href="https://oxadd1.github.io/reflectric/" class="stretched-link" target="_blank"
-                  aria-label="Mehr Informationen zu Reflectric"></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Karte 2: iOS App für Einnahmen/Ausgaben -->
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 mb-4 mt-4 shadow-sm">
-              <div style="height: 240px;" class="overflow-hidden bg-light d-flex align-items-center">
-                <img src="./images/CashProtector-logo.png" class="card-img-top"
-                  style="object-fit: contain; max-height: 100%; width: auto; max-width: 100%; margin: 0 auto;"
-                  alt="iOS App für Finanzen">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center mb-4 mt-2">CashCounter</h5>
-                <p class="card-text text-center flex-grow-1" data-i18n="projects.cashcounter.desc">
-                  Eine intuitive iOS-Anwendung zum Verfolgen persönlicher Einnahmen und Ausgaben.
-                  Mit Diagrammen und Exportfunktionen für einfache Finanzverwaltung.
-                </p>
-                <div class="text-center mt-3">
-                  <span class="btn btn-sm btn-outline-primary" data-i18n="projects.learn_more">Mehr erfahren →</span>
-                </div>
-                <a href="https://oxadd1.github.io/cashcounter/" class="stretched-link" target="_blank"
-                  aria-label="Mehr Informationen zu Finanz-Tracker"></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Karte 3: WordPress Website für B&B -->
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 mb-4 mt-4 shadow-sm">
-              <div style="height: 240px;" class="overflow-hidden bg-light d-flex align-items-center">
-                <img src="./images/bnb.jpeg" class="card-img-top"
-                  style="object-fit: contain; max-height: 100%; width: auto; max-width: 100%; margin: 0 auto;"
-                  alt="WordPress Website für ein Bed & Breakfast">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center mb-4 mt-2" data-i18n="projects.bnb.title"> Chez Muna & Lucien <br>
-                  Bed and Breakfast in Thun</h5>
-                <p class="card-text text-center flex-grow-1" data-i18n="projects.bnb.desc">
-                  Eine maßgeschneiderte Website für ein Bed & Breakfast in Thun.
-                </p>
-                <div class="text-center mt-3">
-                  <span class="btn btn-sm btn-outline-primary" data-i18n="projects.visit_website">Zur Website →</span>
-                </div>
-                <a href="https://chezmunalucien.com/" class="stretched-link" target="_blank"
-                  aria-label="Projekt Chez Muna & Lucien ansehen"></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Karte 4: Beispiel Imbiss Website -->
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 mb-4 mt-4 shadow-sm">
-              <div style="height: 240px;" class="overflow-hidden bg-light d-flex align-items-center">
-                <img src="./images/beispiel-imbiss.jpeg" class="card-img-top"
-                  style="object-fit: contain; max-height: 100%; width: auto; max-width: 100%; margin: 0 auto; padding: 20px;"
-                  alt="Beispiel Imbiss Website">
-              </div>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-center mb-4 mt-2" data-i18n="projects.burger.title">Burger Imbiss Website
-                </h5>
-                <p class="card-text text-center flex-grow-1" data-i18n="projects.burger.desc">
-                  Eine moderne, responsive Website für einen Burger-Imbiss mit Online-Bestellfunktion via WhatsApp.
-                </p>
-                <div class="text-center mt-3">
-                  <span class="btn btn-sm btn-outline-primary" data-i18n="projects.visit_website">Zur Website →</span>
-                </div>
-                <a href="https://oxadd1.github.io/beispiel-imbiss/" class="stretched-link" target="_blank"
-                  aria-label="Beispiel Imbiss Website ansehen"></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-
-    <section class="contact" id="contact">
-      <div class="container">
-        <h3 class="text-center" data-i18n="contact.title">Kontakt</h3>
-        <p class="text-center"><em data-i18n="contact.subtitle">Haben Sie Fragen? Kontaktieren Sie mich gerne!</em></p>
-
-        <div class="row">
-          <div class="col-12 col-md-6 offset-md-2">
-            <h4 data-i18n="contact.name">Name</h4>
-            <p><span style="color: #e87c0f;">Adrian Eberhardt</span></p>
-            <h4>Email</h4>
-            <p><a href="mailto:info.adrianeberhardt@gmail.com">info.adrianeberhardt@gmail.com</a></p>
-          </div>
-          <div class="col-12 col-md-4">
-            <h4 data-i18n="contact.phone">Telefon</h4>
-            <p><a href="tel:+4915123676333">+4915123676333</a></p>
-            <h4 data-i18n="contact.address">Adresse</h4>
-            <p><a href="https://maps.google.com/?q=Strohdorfer+Str.+16,+72488+Sigmaringen,+Germany"
-                target="_blank">Strohdorfer Str. 16 <br>72488 Sigmaringen</a></p>
-          </div>
-        </div>
-
-        <div class="text-center mt-3">
-          <a href="https://wa.me/+4915123676333" target="_blank" class="btn btn-primary"
-            data-i18n="contact.whatsapp">Schreiben Sie mir auf
-            WhatsApp!</a>
-        </div>
-
-        <!-- Social Media Section -->
-        <div class="text-center mt-5">
-          <h4 data-i18n="contact.social">Folgen Sie mir</h4>
-          <p class="text-muted mb-4"><em data-i18n="contact.social_subtitle">Bleiben Sie auf dem Laufenden über meine
-              neuesten Projekte</em></p>
-          <div class="social-media-links d-flex justify-content-center flex-wrap gap-3">
-            <a href="https://github.com/OxADD1" target="_blank" rel="noopener noreferrer" class="social-icon"
-              aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://x.com/AdrianBuildsiOS" target="_blank" rel="noopener noreferrer" class="social-icon"
-              aria-label="Twitter/X">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://www.youtube.com/@Adrian_Builds_iOS" target="_blank" rel="noopener noreferrer"
-              class="social-icon" aria-label="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer pt-md-3 pb-md-2">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <p class="mt-3 text-center">&copy; 2025 Adrian Eberhardt</p>
-          </div>
-          <div class="col-12 col-md-4 mt-md-3">
-            <div class="d-flex justify-content-center mb-3">
-              <a class="footer-links d-flex flex-column justify-content-center" href="./html/impressum.html"
-                data-i18n="footer.imprint">Impressum</a>
-              <a class="footer-links d-flex flex-column justify-content-center" href="./html/datenschutz.html"
-                data-i18n="footer.privacy">Datenschutz</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
   </div>
-  <script type="text/javascript" src="./lib/jquery/jquery-3.7.0.min.js"></script>
-  <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="./js/index.js" defer></script>
+
+  <!-- Hero Section -->
+  <section class="hero container">
+    <div class="hero-columns">
+      <div class="hero-content">
+        <h2 style="color: var(--accent-color); margin-bottom: 1rem;" data-i18n="hero.welcome">Herzlich Willkommen!</h2>
+        <h1>Adrian Eberhardt</h1>
+        <p style="font-size: 1.5rem; margin-bottom: 2rem;" data-i18n="hero.subtitle">iOS-Entwicklung • Web-Entwicklung
+        </p>
+        <a href="#contact" class="cta-button" data-i18n="hero.cta">Kontaktieren Sie mich</a>
+      </div>
+      <div class="hero-visual">
+        <!-- Three.js Container -->
+        <div id="three-canvas-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Section -->
+  <section id="vorteile" class="section container">
+    <div class="services-header">
+      <h2 class="section-headline" data-i18n="expertise.title">Meine Expertise</h2>
+      <p data-i18n="expertise.subtitle">Maßgeschneiderte digitale Lösungen</p>
+    </div>
+
+    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+      <!-- iOS -->
+      <div class="service-card" style="display: flex; flex-direction: column;">
+        <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">
+          <i class="fa-brands fa-apple"></i>
+        </div>
+        <h3 data-i18n="expertise.ios.title">iOS-Entwicklung</h3>
+        <p data-i18n="expertise.ios.desc">Apps für iPhone, iPad und Mac...</p>
+      </div>
+
+      <!-- Web -->
+      <div class="service-card" style="display: flex; flex-direction: column;">
+        <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3 data-i18n="expertise.web.title">Webentwicklung</h3>
+        <p data-i18n="expertise.web.desc">Moderne, responsive Websites...</p>
+      </div>
+    </div>
+
+    <!-- Quote -->
+    <div style="margin-top: 4rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <blockquote style="font-style: italic; font-size: 1.2rem; color: #ccc;">
+        <p data-i18n="expertise.quote">"Quote..."</p>
+      </blockquote>
+      <footer style="margin-top: 1rem; border: none; font-weight: bold;">Adrian Eberhardt</footer>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="ueberblick" class="section container">
+    <h2 class="section-headline" style="text-align: center;" data-i18n="projects.title">Meine Projekte</h2>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;" data-i18n="projects.subtitle">
+      Entdecken Sie eine Auswahl meiner aktuellen Projekte!
+    </p>
+
+    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+      <!-- Project 1: Reflectric -->
+      <div class="project-card">
+        <div class="project-img-container">
+          <img src="./images/Reflectric-logo.png" alt="Reflectric">
+        </div>
+        <div class="project-content">
+          <h3 style="margin-bottom: 0.5rem;">Reflectric</h3>
+          <p data-i18n="projects.reflectric.desc">Eine iOS-App...</p>
+          <div style="margin-top: auto; padding-top: 1rem;">
+            <a href="https://oxadd1.github.io/reflectric/" target="_blank"
+              style="color: var(--accent-color); font-weight: bold;">
+              <span data-i18n="projects.learn_more">Mehr erfahren</span> →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: CashCounter -->
+      <div class="project-card">
+        <div class="project-img-container">
+          <img src="./images/CashProtector-logo.png" alt="CashCounter">
+        </div>
+        <div class="project-content">
+          <h3 style="margin-bottom: 0.5rem;">CashCounter</h3>
+          <p data-i18n="projects.cashcounter.desc">Eine intuitive iOS-Anwendung...</p>
+          <div style="margin-top: auto; padding-top: 1rem;">
+            <a href="https://oxadd1.github.io/cashcounter/" target="_blank"
+              style="color: var(--accent-color); font-weight: bold;">
+              <span data-i18n="projects.learn_more">Mehr erfahren</span> →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Chez Muna -->
+      <div class="project-card">
+        <div class="project-img-container">
+          <img src="./images/bnb.jpeg" alt="Chez Muna & Lucien">
+        </div>
+        <div class="project-content">
+          <h3 style="margin-bottom: 0.5rem;" data-i18n="projects.bnb.title">Chez Muna & Lucien</h3>
+          <p data-i18n="projects.bnb.desc">Eine maßgeschneiderte Website...</p>
+          <div style="margin-top: auto; padding-top: 1rem;">
+            <a href="https://chezmunalucien.com/" target="_blank"
+              style="color: var(--accent-color); font-weight: bold;">
+              <span data-i18n="projects.visit_website">Zur Website</span> →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Burger -->
+      <div class="project-card">
+        <div class="project-img-container">
+          <img src="./images/beispiel-imbiss.jpeg" alt="Burger Imbiss">
+        </div>
+        <div class="project-content">
+          <h3 style="margin-bottom: 0.5rem;" data-i18n="projects.burger.title">Burger Imbiss</h3>
+          <p data-i18n="projects.burger.desc">Eine moderne Website...</p>
+          <div style="margin-top: auto; padding-top: 1rem;">
+            <a href="https://oxadd1.github.io/beispiel-imbiss/" target="_blank"
+              style="color: var(--accent-color); font-weight: bold;">
+              <span data-i18n="projects.visit_website">Zur Website</span> →
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section container" style="text-align: center;">
+    <h2 class="section-headline" data-i18n="contact.title">Kontakt</h2>
+    <p data-i18n="contact.subtitle">Haben Sie Fragen?</p>
+
+    <div
+      style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; margin-top: 3rem; text-align: left;">
+      <div>
+        <h4 style="color: var(--accent-color);" data-i18n="contact.name">Name</h4>
+        <p>Adrian Eberhardt</p>
+        <h4 style="color: var(--accent-color);">Email</h4>
+        <p><a href="mailto:info.adrianeberhardt@gmail.com">info.adrianeberhardt@gmail.com</a></p>
+      </div>
+      <div>
+        <h4 style="color: var(--accent-color);" data-i18n="contact.phone">Telefon</h4>
+        <p><a href="tel:+4915123676333">+4915123676333</a></p>
+        <h4 style="color: var(--accent-color);" data-i18n="contact.address">Adresse</h4>
+        <p><a href="https://maps.google.com/?q=Strohdorfer+Str.+16,+72488+Sigmaringen,+Germany"
+            target="_blank">Strohdorfer Str. 16 <br>72488 Sigmaringen</a></p>
+      </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <a href="https://wa.me/+4915123676333" target="_blank" class="cta-button" data-i18n="contact.whatsapp">Schreiben
+        Sie mir auf WhatsApp!</a>
+    </div>
+
+    <div class="social-media-links">
+      <a href="https://github.com/OxADD1" target="_blank" class="social-icon" aria-label="GitHub"><i
+          class="fab fa-github"></i></a>
+      <a href="https://x.com/AdrianBuildsiOS" target="_blank" class="social-icon" aria-label="Twitter/X"><i
+          class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.youtube.com/@Adrian_Builds_iOS" target="_blank" class="social-icon" aria-label="YouTube"><i
+          class="fab fa-youtube"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Adrian Eberhardt</div>
+      <p>&copy; 2025 Adrian Eberhardt</p>
+      <p>
+        <a href="./html/impressum.html" data-i18n="footer.imprint">Impressum</a> |
+        <a href="./html/datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="./js/three-cube.js"></script>
+  <script type="module" src="./js/stars-bg.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script src="./js/i18n.js"></script>
 
 </body>
 
