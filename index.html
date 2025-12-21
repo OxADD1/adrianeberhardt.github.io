@@ -118,6 +118,21 @@
     .social-icon:hover {
       color: var(--accent-color);
     }
+
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 3rem;
+      max-width: 800px;
+      margin: 2rem auto 0;
+    }
+
+    @media (max-width: 768px) {
+      .contact-card {
+        padding: 1.5rem;
+      }
+    }
   </style>
 </head>
 
@@ -129,8 +144,11 @@
   <!-- Header -->
   <header>
     <div class="container nav-container">
-      <a href="#" class="logo">
+      <a href="#" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
         <img src="./images/logo.png" alt="Adrian Eberhardt Logo" style="height: 40px;">
+        <span
+          style="color: var(--accent-color); font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.25rem; letter-spacing: 0.5px;">Adrian
+          Eberhardt</span>
       </a>
       <nav class="nav-links hide-mobile">
         <a href="#" data-i18n="nav.home">Startseite</a>
@@ -251,7 +269,7 @@
           <div style="margin-top: auto; padding-top: 1rem;">
             <a href="https://oxadd1.github.io/reflectric/" target="_blank"
               style="color: var(--accent-color); font-weight: bold;">
-              <span data-i18n="projects.learn_more">Mehr erfahren</span> →
+              <span data-i18n="projects.learn_more">Mehr erfahren</span>
             </a>
           </div>
         </div>
@@ -268,7 +286,7 @@
           <div style="margin-top: auto; padding-top: 1rem;">
             <a href="https://oxadd1.github.io/cashcounter/" target="_blank"
               style="color: var(--accent-color); font-weight: bold;">
-              <span data-i18n="projects.learn_more">Mehr erfahren</span> →
+              <span data-i18n="projects.learn_more">Mehr erfahren</span>
             </a>
           </div>
         </div>
@@ -285,7 +303,7 @@
           <div style="margin-top: auto; padding-top: 1rem;">
             <a href="https://chezmunalucien.com/" target="_blank"
               style="color: var(--accent-color); font-weight: bold;">
-              <span data-i18n="projects.visit_website">Zur Website</span> →
+              <span data-i18n="projects.visit_website">Zur Website</span>
             </a>
           </div>
         </div>
@@ -302,7 +320,7 @@
           <div style="margin-top: auto; padding-top: 1rem;">
             <a href="https://oxadd1.github.io/beispiel-imbiss/" target="_blank"
               style="color: var(--accent-color); font-weight: bold;">
-              <span data-i18n="projects.visit_website">Zur Website</span> →
+              <span data-i18n="projects.visit_website">Zur Website</span>
             </a>
           </div>
         </div>
@@ -316,35 +334,36 @@
     <h2 class="section-headline" data-i18n="contact.title">Kontakt</h2>
     <p data-i18n="contact.subtitle">Haben Sie Fragen?</p>
 
-    <div
-      style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; margin-top: 3rem; text-align: left;">
-      <div>
-        <h4 style="color: var(--accent-color);" data-i18n="contact.name">Name</h4>
-        <p>Adrian Eberhardt</p>
-        <h4 style="color: var(--accent-color);">Email</h4>
-        <p><a href="mailto:info.adrianeberhardt@gmail.com">info.adrianeberhardt@gmail.com</a></p>
+    <div class="contact-card">
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; text-align: left;">
+        <div>
+          <h4 style="color: var(--accent-color);" data-i18n="contact.name">Name</h4>
+          <p>Adrian Eberhardt</p>
+          <h4 style="color: var(--accent-color);">Email</h4>
+          <p><a href="mailto:info.adrianeberhardt@gmail.com">info.adrianeberhardt@gmail.com</a></p>
+        </div>
+        <div>
+          <h4 style="color: var(--accent-color);" data-i18n="contact.phone">Telefon</h4>
+          <p><a href="tel:+4915123676333">+4915123676333</a></p>
+          <h4 style="color: var(--accent-color);" data-i18n="contact.address">Adresse</h4>
+          <p><a href="https://maps.google.com/?q=Strohdorfer+Str.+16,+72488+Sigmaringen,+Germany"
+              target="_blank">Strohdorfer Str. 16 <br>72488 Sigmaringen</a></p>
+        </div>
       </div>
-      <div>
-        <h4 style="color: var(--accent-color);" data-i18n="contact.phone">Telefon</h4>
-        <p><a href="tel:+4915123676333">+4915123676333</a></p>
-        <h4 style="color: var(--accent-color);" data-i18n="contact.address">Adresse</h4>
-        <p><a href="https://maps.google.com/?q=Strohdorfer+Str.+16,+72488+Sigmaringen,+Germany"
-            target="_blank">Strohdorfer Str. 16 <br>72488 Sigmaringen</a></p>
+
+      <div style="margin-top: 3rem;">
+        <a href="https://wa.me/+4915123676333" target="_blank" class="cta-button" data-i18n="contact.whatsapp">Schreiben
+          Sie mir auf WhatsApp!</a>
       </div>
-    </div>
 
-    <div style="margin-top: 3rem;">
-      <a href="https://wa.me/+4915123676333" target="_blank" class="cta-button" data-i18n="contact.whatsapp">Schreiben
-        Sie mir auf WhatsApp!</a>
-    </div>
-
-    <div class="social-media-links">
-      <a href="https://github.com/OxADD1" target="_blank" class="social-icon" aria-label="GitHub"><i
-          class="fab fa-github"></i></a>
-      <a href="https://x.com/AdrianBuildsiOS" target="_blank" class="social-icon" aria-label="Twitter/X"><i
-          class="fa-brands fa-x-twitter"></i></a>
-      <a href="https://www.youtube.com/@Adrian_Builds_iOS" target="_blank" class="social-icon" aria-label="YouTube"><i
-          class="fab fa-youtube"></i></a>
+      <div class="social-media-links">
+        <a href="https://github.com/OxADD1" target="_blank" class="social-icon" aria-label="GitHub"><i
+            class="fab fa-github"></i></a>
+        <a href="https://x.com/AdrianBuildsiOS" target="_blank" class="social-icon" aria-label="Twitter/X"><i
+            class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/@Adrian_Builds_iOS" target="_blank" class="social-icon" aria-label="YouTube"><i
+            class="fab fa-youtube"></i></a>
+      </div>
     </div>
   </section>
 

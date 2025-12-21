@@ -39,7 +39,7 @@ class Scene3D {
     init() {
         this.scene = new THREE.Scene();
         this.camera = new THREE.PerspectiveCamera(60, this.width / this.height, 0.1, 1000);
-        this.camera.position.z = 7.0; // Closer for impact
+        this.camera.position.z = 7.0;
 
         this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         this.renderer.setSize(this.width, this.height);
@@ -57,14 +57,13 @@ class Scene3D {
             opacity: 1.0
         });
 
-        // 1. The Large Crystal Core (Icosahedron)
-        // Increased size significantly since it's the only object now
+        // The Large Crystal Core (Icosahedron)
         const coreGeo = new THREE.IcosahedronGeometry(2.2, 2);
         const coreEdges = new THREE.EdgesGeometry(coreGeo);
         this.core = new THREE.LineSegments(coreEdges, material);
         this.mainGroup.add(this.core);
 
-        // 2. Inner Solid Glow (Optional, makes it pop)
+        // Inner Solid Glow
         const glowGeo = new THREE.IcosahedronGeometry(2.0, 2);
         const glowMat = new THREE.MeshBasicMaterial({
             color: CONFIG.colors.secondary,
@@ -74,33 +73,6 @@ class Scene3D {
         });
         const glowMesh = new THREE.Mesh(glowGeo, glowMat);
         this.core.add(glowMesh);
-
-
-    }
-
-    createParticles() {
-        const geo = new THREE.BufferGeometry();
-        const count = 60;
-        const positions = [];
-        for (let i = 0; i < count; i++) {
-            const r = 6;
-            const theta = Math.random() * Math.PI * 2;
-            const phi = Math.acos(2 * Math.random() - 1);
-            positions.push(
-                r * Math.sin(phi) * Math.cos(theta),
-                r * Math.sin(phi) * Math.sin(theta),
-                r * Math.cos(phi)
-            );
-        }
-        geo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-        const mat = new THREE.PointsMaterial({
-            color: CONFIG.colors.primary,
-            size: 0.1,
-            transparent: true,
-            opacity: 0.5
-        });
-        this.particles = new THREE.Points(geo, mat);
-        this.mainGroup.add(this.particles);
     }
 
     initPostProcessing() {
@@ -134,16 +106,12 @@ class Scene3D {
         const time = Date.now() * 0.001;
 
         if (this.core) {
-            // Core Rotation
             this.core.rotation.x = time * 0.3;
             this.core.rotation.y = time * 0.5;
 
-            // Mouse Interaction
             this.mainGroup.rotation.x += 0.05 * (this.mouseY - this.mainGroup.rotation.x);
             this.mainGroup.rotation.y += 0.05 * (this.mouseX - this.mainGroup.rotation.y);
         }
-
-
 
         this.composer.render();
     }
