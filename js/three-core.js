@@ -75,8 +75,7 @@ class Scene3D {
         const glowMesh = new THREE.Mesh(glowGeo, glowMat);
         this.core.add(glowMesh);
 
-        // Particles
-        this.createParticles();
+
     }
 
     createParticles() {
@@ -144,9 +143,7 @@ class Scene3D {
             this.mainGroup.rotation.y += 0.05 * (this.mouseX - this.mainGroup.rotation.y);
         }
 
-        if (this.particles) {
-            this.particles.rotation.y = -time * 0.1;
-        }
+
 
         this.composer.render();
     }
