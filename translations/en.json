@@ -48,6 +48,9 @@
             "title": "Burger Restaurant Website",
             "desc": "A modern, responsive website for a burger restaurant with online ordering via WhatsApp."
         },
+        "bitcoinscanner": {
+            "desc": "An iOS app for scanning and tracking Bitcoin addresses. Easily keep track of your Bitcoin transactions."
+        },
         "learn_more": "Learn more →",
         "visit_website": "Visit website →"
     },

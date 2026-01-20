@@ -48,6 +48,9 @@
       "title": "Burger Imbiss Website",
       "desc": "Eine moderne, responsive Website für einen Burger-Imbiss mit Online-Bestellfunktion via WhatsApp."
     },
+    "bitcoinscanner": {
+      "desc": "Eine iOS-App zum Scannen und Verfolgen von Bitcoin-Adressen. Behalten Sie Ihre Bitcoin-Transaktionen einfach im Blick."
+    },
     "learn_more": "Mehr erfahren →",
     "visit_website": "Zur Website →"
   },
