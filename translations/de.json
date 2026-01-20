@@ -67,5 +67,8 @@
   "footer": {
     "imprint": "Impressum",
     "privacy": "Datenschutz"
+  },
+  "iphone": {
+    "alert": "Tippe auf die Icons, um mehr zu erfahren!"
   }
 }

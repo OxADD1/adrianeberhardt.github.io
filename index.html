@@ -229,12 +229,37 @@
         <a href="#contact" class="cta-button" data-i18n="hero.cta">Kontaktieren Sie mich</a>
       </div>
       <div class="hero-visual">
-        <!-- iPhone Mockup with App Showcase -->
+        <!-- iPhone Mockup with App Showcase - Studio93 Style -->
         <div class="iphone-mockup">
           <div class="iphone-frame">
             <div class="iphone-screen">
+              <!-- Status Bar -->
+              <div class="iphone-status-bar">
+                <span class="status-time" id="status-time">19:14</span>
+                <span class="status-icons">
+                  <i class="fas fa-signal" style="font-size: 11px;"></i>
+                  <i class="fas fa-wifi" style="font-size: 11px;"></i>
+                  <i class="fas fa-battery-full" style="font-size: 13px;"></i>
+                </span>
+              </div>
+
+              <!-- Dynamic Island -->
               <div class="iphone-notch"></div>
+
               <div class="iphone-content">
+                <!-- Calendar Widget -->
+                <div class="iphone-widget">
+                  <div class="widget-header">
+                    <div class="widget-icon" style="background: linear-gradient(135deg, #FF3B30, #FF6B6B);">
+                      <i class="fas fa-calendar"></i>
+                    </div>
+                    <span class="widget-title" id="widget-month">Januar</span>
+                  </div>
+                  <div class="widget-date" id="widget-date">20</div>
+                  <div class="widget-day" id="widget-day">Montag</div>
+                </div>
+
+                <!-- App Grid -->
                 <div class="app-grid">
                   <!-- Bitcoin Scanner -->
                   <a href="https://oxadd1.github.io/Bitcoin-Scanner-Website/" target="_blank" class="app-icon">
@@ -252,6 +277,28 @@
                     <span class="app-label">CashCounter</span>
                   </a>
                 </div>
+              </div>
+
+              <!-- iOS Dock -->
+              <div class="iphone-dock">
+                <a href="mailto:info.adrianeberhardt@gmail.com" title="Email">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Mail"
+                    class="dock-icon">
+                </a>
+                <a href="https://github.com/OxADD1" target="_blank" title="GitHub">
+                  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="dock-icon"
+                    style="background: #24292e; padding: 10px; box-sizing: border-box;">
+                </a>
+                <a href="https://x.com/AdrianBuildsiOS" target="_blank" title="Twitter/X">
+                  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="Twitter" class="dock-icon"
+                    style="background: #000; padding: 8px; box-sizing: border-box;">
+                </a>
+              </div>
+
+              <!-- Interactive Alert -->
+              <div class="iphone-alert" id="iphone-alert">
+                <p data-i18n="iphone.alert">Tippe auf die Icons, um mehr zu erfahren!</p>
+                <button onclick="document.getElementById('iphone-alert').classList.add('hidden')">OK</button>
               </div>
             </div>
           </div>
@@ -466,6 +513,41 @@
   <script type="module" src="./js/stars-bg.js"></script>
   <script src="./js/navbar.js"></script>
   <script src="./js/i18n.js"></script>
+
+  <!-- iPhone Mockup Dynamic Time/Date -->
+  <script>
+    (function () {
+      const monthsDE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+      const monthsEN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      const daysDE = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+      const daysEN = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+      function updateIPhoneDisplay() {
+        const now = new Date();
+        const lang = localStorage.getItem('lang') || 'de';
+        const months = lang === 'en' ? monthsEN : monthsDE;
+        const days = lang === 'en' ? daysEN : daysDE;
+
+        const timeEl = document.getElementById('status-time');
+        const monthEl = document.getElementById('widget-month');
+        const dateEl = document.getElementById('widget-date');
+        const dayEl = document.getElementById('widget-day');
+
+        if (timeEl) timeEl.textContent = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+        if (monthEl) monthEl.textContent = months[now.getMonth()];
+        if (dateEl) dateEl.textContent = now.getDate();
+        if (dayEl) dayEl.textContent = days[now.getDay()];
+      }
+
+      updateIPhoneDisplay();
+      setInterval(updateIPhoneDisplay, 60000);
+
+      // Update when language changes
+      window.addEventListener('storage', function (e) {
+        if (e.key === 'lang') updateIPhoneDisplay();
+      });
+    })();
+  </script>
 
 </body>
 
