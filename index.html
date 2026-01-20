@@ -289,9 +289,10 @@
                   <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="dock-icon"
                     style="background: #24292e; padding: 10px; box-sizing: border-box;">
                 </a>
-                <a href="https://x.com/AdrianBuildsiOS" target="_blank" title="Twitter/X">
-                  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="Twitter" class="dock-icon"
-                    style="background: #000; padding: 8px; box-sizing: border-box;">
+                <a href="https://x.com/AdrianBuildsiOS" target="_blank" title="X">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X"
+                    class="dock-icon"
+                    style="background: #fff; padding: 12px; box-sizing: border-box; border-radius: 13px; filter: invert(1);">
                 </a>
               </div>
 
@@ -524,9 +525,10 @@
 
       function updateIPhoneDisplay() {
         const now = new Date();
-        const lang = localStorage.getItem('lang') || 'de';
-        const months = lang === 'en' ? monthsEN : monthsDE;
-        const days = lang === 'en' ? daysEN : daysDE;
+        // Use the same localStorage key as i18n.js
+        const lang = localStorage.getItem('kadatax-lang') || 'en';
+        const months = lang === 'de' ? monthsDE : monthsEN;
+        const days = lang === 'de' ? daysDE : daysEN;
 
         const timeEl = document.getElementById('status-time');
         const monthEl = document.getElementById('widget-month');
@@ -539,13 +541,23 @@
         if (dayEl) dayEl.textContent = days[now.getDay()];
       }
 
+      // Initial update
       updateIPhoneDisplay();
+
+      // Update time every minute
       setInterval(updateIPhoneDisplay, 60000);
 
-      // Update when language changes
-      window.addEventListener('storage', function (e) {
-        if (e.key === 'lang') updateIPhoneDisplay();
-      });
+      // Hook into the existing setLanguage function to update calendar on language change
+      const originalSetLanguage = window.setLanguage;
+      if (originalSetLanguage) {
+        window.setLanguage = function (lang) {
+          originalSetLanguage(lang);
+          updateIPhoneDisplay();
+        };
+      }
+
+      // Make updateIPhoneDisplay available globally for i18n callback
+      window.updateIPhoneDisplay = updateIPhoneDisplay;
     })();
   </script>
 
