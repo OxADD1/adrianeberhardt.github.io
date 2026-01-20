@@ -51,16 +51,6 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Three.js Import Map -->
-  <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-            }
-        }
-    </script>
-
   <!-- Styles -->
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/navbar.css">
@@ -69,6 +59,7 @@
   <link rel="stylesheet" href="./css/stars.css">
   <link rel="stylesheet" href="./css/cube.css">
   <link rel="stylesheet" href="./css/i18n.css">
+  <link rel="stylesheet" href="./css/iphone-mockup.css">
 
   <style>
     /* Custom Overrides for Adrian's Portfolio */
@@ -228,8 +219,33 @@
         <a href="#contact" class="cta-button" data-i18n="hero.cta">Kontaktieren Sie mich</a>
       </div>
       <div class="hero-visual">
-        <!-- Three.js Container -->
-        <div id="three-canvas-container"></div>
+        <!-- iPhone Mockup with App Showcase -->
+        <div class="iphone-mockup">
+          <div class="iphone-frame">
+            <div class="iphone-screen">
+              <div class="iphone-notch"></div>
+              <div class="iphone-content">
+                <div class="app-grid">
+                  <!-- Bitcoin Scanner -->
+                  <a href="https://oxadd1.github.io/Bitcoin-Scanner-Website/" target="_blank" class="app-icon">
+                    <img src="./images/beta-logo-bitcoin_scanner.jpg" alt="Bitcoin Scanner" class="app-icon-img">
+                    <span class="app-label">Bitcoin Scanner</span>
+                  </a>
+                  <!-- Reflectric -->
+                  <a href="https://oxadd1.github.io/reflectric/" target="_blank" class="app-icon">
+                    <img src="./images/Reflectric-logo.png" alt="Reflectric" class="app-icon-img">
+                    <span class="app-label">Reflectric</span>
+                  </a>
+                  <!-- CashCounter -->
+                  <a href="https://oxadd1.github.io/cashcounter/" target="_blank" class="app-icon">
+                    <img src="./images/CashProtector-logo.png" alt="CashCounter" class="app-icon-img">
+                    <span class="app-label">CashCounter</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -436,7 +452,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script type="module" src="./js/three-core.js"></script>
+
   <script type="module" src="./js/stars-bg.js"></script>
   <script src="./js/navbar.js"></script>
   <script src="./js/i18n.js"></script>

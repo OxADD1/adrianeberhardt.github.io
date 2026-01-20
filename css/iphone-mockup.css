@@ -1,0 +1,205 @@
+/* ===================================
+   iPhone Mockup Styles
+   =================================== */
+
+.iphone-mockup {
+    position: relative;
+    width: 280px;
+    height: 570px;
+    margin: 0 auto;
+}
+
+/* iPhone Frame */
+.iphone-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #2a2a2a 100%);
+    border-radius: 50px;
+    padding: 12px;
+    box-shadow: 
+        0 0 0 2px #3a3a3a,
+        0 0 0 4px #1a1a1a,
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* iPhone Screen */
+.iphone-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #0a0a0a 0%, #151515 100%);
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dynamic Island */
+.iphone-notch {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 32px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+/* Screen Content */
+.iphone-content {
+    padding: 60px 20px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* App Grid */
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 10px;
+}
+
+/* Individual App Icon */
+.app-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.app-icon:hover {
+    transform: scale(1.1);
+}
+
+.app-icon:active {
+    transform: scale(0.95);
+}
+
+/* App Icon Image */
+.app-icon-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.2s ease;
+}
+
+.app-icon:hover .app-icon-img {
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(255, 193, 7, 0.3);
+}
+
+/* App Label */
+.app-label {
+    margin-top: 6px;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    max-width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+}
+
+/* iPhone Side Buttons */
+.iphone-frame::before {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 120px;
+    width: 3px;
+    height: 80px;
+    background: linear-gradient(180deg, #3a3a3a, #2a2a2a, #3a3a3a);
+    border-radius: 0 2px 2px 0;
+}
+
+.iphone-frame::after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 100px;
+    width: 3px;
+    height: 30px;
+    background: linear-gradient(180deg, #3a3a3a, #2a2a2a, #3a3a3a);
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 50px 0 #2a2a2a, 0 90px 0 #2a2a2a;
+}
+
+/* Glow Effect */
+.iphone-mockup::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: var(--accent-color, #FFC107);
+    filter: blur(100px);
+    opacity: 0.15;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .iphone-mockup {
+        width: 220px;
+        height: 450px;
+        margin-top: 2rem;
+    }
+
+    .iphone-frame {
+        border-radius: 40px;
+        padding: 10px;
+    }
+
+    .iphone-screen {
+        border-radius: 32px;
+    }
+
+    .iphone-notch {
+        width: 80px;
+        height: 26px;
+        top: 10px;
+    }
+
+    .app-icon-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .app-label {
+        font-size: 9px;
+    }
+
+    .app-grid {
+        gap: 12px;
+    }
+}
+
+/* Hero Visual Container Override */
+.hero-visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
