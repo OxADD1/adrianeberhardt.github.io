@@ -165,10 +165,11 @@
 /* App Grid */
 .app-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
     gap: 20px 16px;
     padding: 10px 8px;
     justify-items: center;
+    justify-content: center;
 }
 
 /* Individual App Icon */
