@@ -57,6 +57,8 @@ ul {
 
 .section {
     padding: 4rem 0;
+    scroll-margin-top: 100px;
+    /* Offset for fixed header when using anchor links */
 }
 
 /* --- HEADER --- */
