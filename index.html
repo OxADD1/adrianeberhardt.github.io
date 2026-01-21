@@ -70,6 +70,7 @@
   <link rel="stylesheet" href="./css/cube.css">
   <link rel="stylesheet" href="./css/i18n.css">
   <link rel="stylesheet" href="./css/iphone-mockup.css">
+  <link rel="stylesheet" href="./css/kontakt.css">
 
   <style>
     /* Custom Overrides for Adrian's Portfolio */
@@ -346,7 +347,7 @@
 
   <!-- Projects Section -->
   <section id="ueberblick" class="section container">
-    <h2 class="section-headline" style="text-align: center;" data-i18n="projects.title">Meine Projekte</h2>
+    <h2 class="section-headline" style="text-align: center;" data-i18n="projects.title">Projekte</h2>
     <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;" data-i18n="projects.subtitle">
       Entdecken Sie eine Auswahl meiner aktuellen Projekte!
     </p>
@@ -465,19 +466,23 @@
     <p data-i18n="contact.subtitle">Haben Sie Fragen?</p>
 
     <div class="contact-card">
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; text-align: left;">
-        <div>
-          <h4 style="color: var(--accent-color);" data-i18n="contact.name">Name</h4>
+      <div class="contact-info-grid">
+        <div class="contact-item">
+          <h4 data-i18n="contact.name">Name</h4>
           <p>Adrian Eberhardt</p>
-          <h4 style="color: var(--accent-color);">Email</h4>
+        </div>
+        <div class="contact-item">
+          <h4>Email</h4>
           <p><a href="mailto:info.adrianeberhardt@gmail.com">info.adrianeberhardt@gmail.com</a></p>
         </div>
-        <div>
-          <h4 style="color: var(--accent-color);" data-i18n="contact.phone">Telefon</h4>
+        <div class="contact-item">
+          <h4 data-i18n="contact.phone">Telefon</h4>
           <p><a href="tel:+4915123676333">+4915123676333</a></p>
-          <h4 style="color: var(--accent-color);" data-i18n="contact.address">Adresse</h4>
+        </div>
+        <div class="contact-item">
+          <h4 data-i18n="contact.address">Adresse</h4>
           <p><a href="https://maps.google.com/?q=Strohdorfer+Str.+16,+72488+Sigmaringen,+Germany"
-              target="_blank">Strohdorfer Str. 16 <br>72488 Sigmaringen</a></p>
+              target="_blank">Strohdorfer Str. 16, 72488 Sigmaringen</a></p>
         </div>
       </div>
 

@@ -195,6 +195,7 @@ footer {
 
     #contact {
         padding-top: 6rem;
+        scroll-margin-top: 80px;
     }
 
     .container {
