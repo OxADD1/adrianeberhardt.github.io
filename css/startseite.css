@@ -1,4 +1,39 @@
 /* --- HERO (Startseite only) --- */
+
+/* Hero Greeting - "Hi, I'm Name" style */
+.hero-greeting {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.gradient-name {
+    background: linear-gradient(135deg, #FFC107, #FF9800, #FFD54F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline;
+}
+
+.hero-role {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .hero-greeting {
+        font-size: 2.2rem;
+    }
+    
+    .hero-role {
+        font-size: 1.2rem;
+    }
+}
+
 .hero {
     min-height: 100vh;
     height: auto;

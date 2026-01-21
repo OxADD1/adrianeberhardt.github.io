@@ -8,8 +8,8 @@
         "about": "About Me"
     },
     "hero": {
-        "welcome": "Welcome!",
-        "subtitle": "iOS Development • Web Development",
+        "greeting": "Hi, I'm",
+        "subtitle": "iOS Engineer • Web Developer",
         "cta": "Contact Me",
         "headline1": "Understand Data.",
         "headline2": "Improve Decisions.",
