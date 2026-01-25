@@ -1,0 +1,90 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "expertise": "Expertise",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "greeting": "Hi, ich bin",
+        "subtitle": "iOS-Entwickler • Web-Entwickler",
+        "cta": "Kontaktieren Sie mich"
+    },
+    "expertise": {
+        "title": "Expertise",
+        "subtitle": "Maßgeschneiderte digitale Lösungen",
+        "ios": {
+            "title": "iOS-Entwicklung",
+            "desc": "Apps für iPhone, iPad und Mac – von der Konzeption über UI/UX bis zur Veröffentlichung im App Store, inklusive Testing und langfristiger Betreuung."
+        },
+        "web": {
+            "title": "Webentwicklung",
+            "desc": "Moderne, responsive Websites und Web-Apps – optimiert für Performance, Barrierefreiheit und eine klare Markenbotschaft auf allen Geräten."
+        },
+        "quote": "\"In einer Welt, in der Technologie ständig neue Grenzen überschreitet, liegt der wahre Wert nicht nur im Code selbst, sondern in der kreativen Verbindung zwischen menschlicher Innovation und digitalen Möglichkeiten.\" — Adrian Eberhardt"
+    },
+    "projects": {
+        "title": "Projekte",
+        "subtitle": "Entdecken Sie eine Auswahl meiner aktuellen Projekte!",
+        "bitcoinscanner": {
+            "desc": "Eine iOS-App zum Scannen und Verfolgen von Bitcoin-Adressen. Behalten Sie Ihre Bitcoin-Transaktionen einfach im Blick."
+        },
+        "kadatax": {
+            "desc": "Design und Entwicklung einer modernen Corporate Website mit interaktiven 3D-Elementen."
+        },
+        "reflectric": {
+            "desc": "Eine iOS-App für tägliche Reflexionen, Stimmungsverfolgung und persönliches Wachstum. Mit iCloud-Sync für iPhone, iPad und Mac."
+        },
+        "cashcounter": {
+            "desc": "Eine intuitive iOS-Anwendung zum Verfolgen persönlicher Einnahmen und Ausgaben. Mit Diagrammen und Exportfunktionen für einfache Finanzverwaltung."
+        },
+        "bnb": {
+            "title": "Chez Muna & Lucien",
+            "desc": "Eine maßgeschneiderte Website für ein Bed & Breakfast in Thun."
+        },
+        "burger": {
+            "title": "Burger Imbiss Website",
+            "desc": "Eine moderne, responsive Website für einen Burger-Imbiss mit Online-Bestellfunktion via WhatsApp."
+        },
+        "learn_more": "Mehr erfahren →",
+        "visit_website": "Zur Website →"
+    },
+    "contact": {
+        "title": "Kontakt",
+        "subtitle": "Haben Sie Fragen? Kontaktieren Sie mich gerne!",
+        "name": "Name",
+        "phone": "Telefon",
+        "address": "Adresse",
+        "whatsapp": "Schreiben Sie mir auf WhatsApp!"
+    },
+    "footer": {
+        "imprint": "Impressum",
+        "privacy": "Datenschutz"
+    },
+    "iphone": {
+        "alert": "Tippe auf die Icons, um mehr zu erfahren!",
+        "months": [
+            "Januar",
+            "Februar",
+            "März",
+            "April",
+            "Mai",
+            "Juni",
+            "Juli",
+            "August",
+            "September",
+            "Oktober",
+            "November",
+            "Dezember"
+        ],
+        "days": [
+            "Sonntag",
+            "Montag",
+            "Dienstag",
+            "Mittwoch",
+            "Donnerstag",
+            "Freitag",
+            "Samstag"
+        ]
+    }
+}

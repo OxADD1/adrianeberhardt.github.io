@@ -1,0 +1,102 @@
+/* Hero Section Styles */
+.hero {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 4rem;
+    overflow: visible;
+}
+
+.hero-columns {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    flex: 1;
+    z-index: 2;
+    padding-right: 2rem;
+}
+
+.hero-greeting {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.gradient-name {
+    background: linear-gradient(135deg, #FFC107, #FF9800, #FFD54F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline;
+}
+
+.hero-role {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--accent-color);
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 120px;
+        height: auto;
+        min-height: 100vh;
+        justify-content: center;
+    }
+
+    .hero-columns {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .hero-greeting {
+        font-size: 2.2rem;
+    }
+
+    .hero-role {
+        font-size: 1.2rem;
+    }
+}

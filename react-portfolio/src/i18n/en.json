@@ -1,0 +1,90 @@
+{
+    "nav": {
+        "home": "Home",
+        "expertise": "Expertise",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hi, I'm",
+        "subtitle": "iOS Developer • Web Developer",
+        "cta": "Contact me"
+    },
+    "expertise": {
+        "title": "Expertise",
+        "subtitle": "Tailored digital solutions",
+        "ios": {
+            "title": "iOS Development",
+            "desc": "Apps for iPhone, iPad and Mac – from concept to UI/UX to App Store release, including testing and long-term support."
+        },
+        "web": {
+            "title": "Web Development",
+            "desc": "Modern, responsive websites and web apps – optimized for performance, accessibility and a clear brand message on all devices."
+        },
+        "quote": "\"In a world where technology constantly breaks new boundaries, the true value lies not just in the code itself, but in the creative connection between human innovation and digital possibilities.\" — Adrian Eberhardt"
+    },
+    "projects": {
+        "title": "Projects",
+        "subtitle": "Discover a selection of my latest projects!",
+        "bitcoinscanner": {
+            "desc": "An iOS app for scanning and tracking Bitcoin addresses. Keep track of your Bitcoin transactions with ease."
+        },
+        "kadatax": {
+            "desc": "Design and development of a modern corporate website with interactive 3D elements."
+        },
+        "reflectric": {
+            "desc": "An iOS app for daily reflections, mood tracking and personal growth. With iCloud sync for iPhone, iPad and Mac."
+        },
+        "cashcounter": {
+            "desc": "An intuitive iOS application for tracking personal income and expenses. With charts and export functions for easy financial management."
+        },
+        "bnb": {
+            "title": "Chez Muna & Lucien",
+            "desc": "A custom website for a Bed & Breakfast in Thun."
+        },
+        "burger": {
+            "title": "Burger Restaurant Website",
+            "desc": "A modern, responsive website for a burger restaurant with WhatsApp ordering."
+        },
+        "learn_more": "Learn more →",
+        "visit_website": "Visit website →"
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Have questions? Feel free to contact me!",
+        "name": "Name",
+        "phone": "Phone",
+        "address": "Address",
+        "whatsapp": "Message me on WhatsApp!"
+    },
+    "footer": {
+        "imprint": "Imprint",
+        "privacy": "Privacy Policy"
+    },
+    "iphone": {
+        "alert": "Tap the icons to learn more!",
+        "months": [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ],
+        "days": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ]
+    }
+}

@@ -1,0 +1,503 @@
+/* iPhone Mockup Styles - Studio93 Style */
+
+.iphone-mockup {
+    position: relative;
+    width: 320px;
+    height: 650px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+/* iPhone Frame - Premium Space Black Look */
+.iphone-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    border-radius: 55px;
+    padding: 12px;
+    box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, 0.1),
+        0 0 0 1px #3a3a3a,
+        0 0 0 3px #1a1a1a,
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.iphone-mockup:hover .iphone-frame {
+    transform: rotateY(-5deg) rotateX(3deg);
+    box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, 0.15),
+        0 0 0 1px #3a3a3a,
+        0 0 0 3px #1a1a1a,
+        0 30px 70px rgba(0, 0, 0, 0.5),
+        0 15px 40px rgba(0, 0, 0, 0.35),
+        0 0 40px rgba(255, 193, 7, 0.15);
+}
+
+/* iPhone Screen - Sunset Orange-Red Gradient */
+.iphone-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #fff3e0 0%, #ffcc80 25%, #ff8a65 55%, #ef5350 85%, #d32f2f 100%);
+    border-radius: 45px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dynamic Island */
+.iphone-notch {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 35px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Status Bar */
+.iphone-status-bar {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    z-index: 50;
+}
+
+.status-time {
+    width: 60px;
+}
+
+.status-icons {
+    display: flex;
+    gap: 4px;
+    width: 60px;
+    justify-content: flex-end;
+    font-size: 13px;
+}
+
+/* Screen Content */
+.iphone-content {
+    padding: 65px 16px 90px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+}
+
+/* iOS Widget Style */
+.iphone-widget {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 22px;
+    padding: 14px 16px;
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 0.5px rgba(255, 255, 255, 0.8);
+}
+
+.widget-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.widget-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    background: linear-gradient(135deg, #FF3B30, #FF6B6B);
+}
+
+.widget-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: -0.2px;
+}
+
+.widget-date {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: #000;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.widget-day {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* App Grid */
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px 16px;
+    padding: 10px 8px;
+    justify-items: center;
+    justify-content: center;
+}
+
+/* Individual App Icon */
+.app-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    cursor: pointer;
+}
+
+.app-icon:hover {
+    transform: scale(1.08);
+}
+
+.app-icon:active {
+    transform: scale(0.92);
+    filter: brightness(0.9);
+}
+
+/* App Icon Image */
+.app-icon-img {
+    width: 62px;
+    height: 62px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.app-icon:hover .app-icon-img {
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25),
+        0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* App Label */
+.app-label {
+    margin-top: 6px;
+    font-size: 11px;
+    color: #000;
+    text-align: center;
+    max-width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* iOS Dock */
+.iphone-dock {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 0 20px;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 0.5px rgba(255, 255, 255, 0.5);
+}
+
+.dock-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 13px;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease;
+    cursor: pointer;
+}
+
+.dock-icon:hover {
+    transform: scale(1.1) translateY(-2px);
+}
+
+.dock-icon:active {
+    transform: scale(0.95);
+}
+
+/* iPhone Side Buttons */
+.iphone-frame::before {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 130px;
+    width: 4px;
+    height: 90px;
+    background: linear-gradient(180deg, #404040, #2a2a2a, #404040);
+    border-radius: 0 3px 3px 0;
+}
+
+.iphone-frame::after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 110px;
+    width: 4px;
+    height: 35px;
+    background: linear-gradient(180deg, #404040, #2a2a2a, #404040);
+    border-radius: 3px 0 0 3px;
+    box-shadow:
+        0 55px 0 #2a2a2a,
+        0 100px 0 #2a2a2a;
+}
+
+/* Ambient Glow Effect */
+.iphone-mockup::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle,
+            rgba(255, 87, 34, 0.4) 0%,
+            rgba(244, 67, 54, 0.25) 40%,
+            transparent 70%);
+    filter: blur(60px);
+    z-index: -1;
+    pointer-events: none;
+    animation: ambientPulse 4s ease-in-out infinite;
+}
+
+@keyframes ambientPulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+/* Info Popup Alert */
+.iphone-alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 14px;
+    padding: 20px 24px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 200;
+    min-width: 220px;
+    animation: alertFadeIn 0.3s ease;
+}
+
+@keyframes alertFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.iphone-alert p {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    font-size: 13px;
+    color: #333;
+    margin: 0 0 16px 0;
+    font-weight: 500;
+}
+
+.iphone-alert button {
+    background: none;
+    border: none;
+    color: #007AFF;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 24px;
+    transition: opacity 0.2s;
+}
+
+.iphone-alert button:hover {
+    opacity: 0.7;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .iphone-mockup {
+        width: 260px;
+        height: 530px;
+        margin-top: 2rem;
+    }
+
+    .iphone-frame {
+        border-radius: 45px;
+        padding: 10px;
+    }
+
+    .iphone-mockup:hover .iphone-frame {
+        transform: none;
+    }
+
+    .iphone-screen {
+        border-radius: 38px;
+    }
+
+    .iphone-notch {
+        width: 100px;
+        height: 30px;
+        top: 12px;
+    }
+
+    .iphone-content {
+        padding: 55px 12px 80px;
+    }
+
+    .app-icon-img {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+    }
+
+    .app-label {
+        font-size: 10px;
+    }
+
+    .app-grid {
+        gap: 14px 12px;
+    }
+
+    .iphone-dock {
+        height: 68px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        border-radius: 26px;
+    }
+
+    .dock-icon {
+        width: 46px;
+        height: 46px;
+    }
+
+    .widget-date {
+        font-size: 40px;
+    }
+
+    .iphone-widget {
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .iphone-mockup {
+        width: 220px;
+        height: 450px;
+    }
+
+    .iphone-frame {
+        border-radius: 38px;
+        padding: 8px;
+    }
+
+    .iphone-screen {
+        border-radius: 32px;
+    }
+
+    .iphone-notch {
+        width: 85px;
+        height: 26px;
+        top: 10px;
+    }
+
+    .iphone-content {
+        padding: 48px 10px 72px;
+        gap: 10px;
+    }
+
+    .app-icon-img {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+    }
+
+    .app-grid {
+        gap: 10px 8px;
+    }
+
+    .iphone-dock {
+        height: 58px;
+        bottom: 8px;
+        left: 8px;
+        right: 8px;
+        border-radius: 22px;
+        gap: 12px;
+    }
+
+    .dock-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .widget-date {
+        font-size: 32px;
+    }
+
+    .iphone-widget {
+        padding: 10px 12px;
+        border-radius: 18px;
+    }
+}
