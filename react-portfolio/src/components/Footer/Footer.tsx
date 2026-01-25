@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
@@ -10,7 +11,7 @@ export default function Footer() {
                 <div className="footer-logo">Adrian Eberhardt</div>
                 <p>&copy; 2026 Adrian Eberhardt</p>
                 <p className="footer-links">
-                    <a href="/impressum">{t('footer.imprint')}</a> | <a href="/datenschutz">{t('footer.privacy')}</a>
+                    <Link to="/impressum">{t('footer.imprint')}</Link> | <Link to="/datenschutz">{t('footer.privacy')}</Link>
                 </p>
             </div>
         </footer>
