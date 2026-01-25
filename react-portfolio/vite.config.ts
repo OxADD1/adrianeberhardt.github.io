@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // Relative path for better compatibility
+  base: '/', // Root path is correct for user pages with HashRouter
 })
