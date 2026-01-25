@@ -1,6 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import './Projects.css';
 
+// Import images
+import bitcoinScannerImg from '/images/beta-logo-bitcoin_scanner.jpg';
+import kaDataxImg from '/images/kadatax-preview.png';
+import reflectricImg from '/images/Reflectric-logo.png';
+import cashCounterImg from '/images/CashProtector-logo.png';
+import bnbImg from '/images/bnb.jpeg';
+import burgerImg from '/images/beispiel-imbiss.jpeg';
+
 interface Project {
     id: string;
     title: string;
@@ -15,7 +23,7 @@ const projects: Project[] = [
         id: 'bitcoinscanner',
         title: 'Bitcoin Scanner',
         descriptionKey: 'projects.bitcoinscanner.desc',
-        image: '/images/beta-logo-bitcoin_scanner.jpg',
+        image: bitcoinScannerImg,
         url: 'https://oxadd1.github.io/Bitcoin-Scanner-Website/',
         type: 'app'
     },
@@ -23,7 +31,7 @@ const projects: Project[] = [
         id: 'kadatax',
         title: 'KA DataX',
         descriptionKey: 'projects.kadatax.desc',
-        image: '/images/kadatax-preview.png',
+        image: kaDataxImg,
         url: 'https://kadatax.com/startseite/',
         type: 'website'
     },
@@ -31,7 +39,7 @@ const projects: Project[] = [
         id: 'reflectric',
         title: 'Reflectric',
         descriptionKey: 'projects.reflectric.desc',
-        image: '/images/Reflectric-logo.png',
+        image: reflectricImg,
         url: 'https://oxadd1.github.io/reflectric/',
         type: 'app'
     },
@@ -39,7 +47,7 @@ const projects: Project[] = [
         id: 'cashcounter',
         title: 'CashCounter',
         descriptionKey: 'projects.cashcounter.desc',
-        image: '/images/CashProtector-logo.png',
+        image: cashCounterImg,
         url: 'https://oxadd1.github.io/cashcounter/',
         type: 'app'
     },
@@ -47,7 +55,7 @@ const projects: Project[] = [
         id: 'bnb',
         title: 'Chez Muna & Lucien',
         descriptionKey: 'projects.bnb.desc',
-        image: '/images/bnb.jpeg',
+        image: bnbImg,
         url: 'https://chezmunalucien.com/',
         type: 'website'
     },
@@ -55,7 +63,7 @@ const projects: Project[] = [
         id: 'burger',
         title: 'Burger Imbiss',
         descriptionKey: 'projects.burger.desc',
-        image: '/images/beispiel-imbiss.jpeg',
+        image: burgerImg,
         url: 'https://oxadd1.github.io/beispiel-imbiss/',
         type: 'website'
     }

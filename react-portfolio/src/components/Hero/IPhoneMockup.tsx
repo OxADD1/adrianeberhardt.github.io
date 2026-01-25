@@ -2,24 +2,29 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './IPhoneMockup.css';
 
+// Import app icons
+import bitcoinScannerIcon from '/images/beta-logo-bitcoin_scanner.jpg';
+import reflectricIcon from '/images/Reflectric-logo.png';
+import cashCounterIcon from '/images/CashProtector-logo.png';
+
 // App data
 const apps = [
     {
         id: 'bitcoinscanner',
         name: 'Bitcoin Scanner',
-        icon: '/images/beta-logo-bitcoin_scanner.jpg',
+        icon: bitcoinScannerIcon,
         url: 'https://oxadd1.github.io/Bitcoin-Scanner-Website/'
     },
     {
         id: 'reflectric',
         name: 'Reflectric',
-        icon: '/images/Reflectric-logo.png',
+        icon: reflectricIcon,
         url: 'https://oxadd1.github.io/reflectric/'
     },
     {
         id: 'cashcounter',
         name: 'CashCounter',
-        icon: '/images/CashProtector-logo.png',
+        icon: cashCounterIcon,
         url: 'https://oxadd1.github.io/cashcounter/'
     }
 ];
