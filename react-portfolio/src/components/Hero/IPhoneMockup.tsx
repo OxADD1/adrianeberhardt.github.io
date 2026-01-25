@@ -25,7 +25,7 @@ const apps = [
 ];
 
 export default function IPhoneMockup() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const [showAlert, setShowAlert] = useState(true);
     const [time, setTime] = useState(new Date());
 
