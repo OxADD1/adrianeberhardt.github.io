@@ -26,6 +26,9 @@
     "projects": {
         "title": "Projects",
         "subtitle": "Discover a selection of my latest projects!",
+        "camscript": {
+            "desc": "An invisible teleprompter for macOS. Read your script while maintaining eye contact – perfect for Zoom, Teams, and OBS."
+        },
         "bitcoinscanner": {
             "desc": "An iOS app for scanning and tracking Bitcoin addresses. Keep track of your Bitcoin transactions with ease."
         },

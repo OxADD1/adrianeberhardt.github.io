@@ -6,9 +6,16 @@ import './IPhoneMockup.css';
 import bitcoinScannerIcon from '/images/beta-logo-bitcoin_scanner.jpg';
 import reflectricIcon from '/images/Reflectric-logo.png';
 import cashCounterIcon from '/images/CashProtector-logo.png';
+import camScriptIcon from '/images/camscript-logo.png';
 
 // App data
 const apps = [
+    {
+        id: 'camscript',
+        name: 'CamScript',
+        icon: camScriptIcon,
+        url: 'https://oxadd1.github.io/CamScript-Website/'
+    },
     {
         id: 'bitcoinscanner',
         name: 'Bitcoin Scanner',

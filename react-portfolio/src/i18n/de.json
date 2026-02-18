@@ -26,6 +26,9 @@
     "projects": {
         "title": "Projekte",
         "subtitle": "Entdecken Sie eine Auswahl meiner aktuellen Projekte!",
+        "camscript": {
+            "desc": "Ein unsichtbarer Teleprompter für macOS. Lesen Sie Ihr Skript ab, während Sie Blickkontakt halten – perfekt für Zoom, Teams und OBS."
+        },
         "bitcoinscanner": {
             "desc": "Eine iOS-App zum Scannen und Verfolgen von Bitcoin-Adressen. Behalten Sie Ihre Bitcoin-Transaktionen einfach im Blick."
         },

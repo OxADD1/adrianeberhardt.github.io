@@ -8,6 +8,7 @@ import reflectricImg from '/images/Reflectric-logo.png';
 import cashCounterImg from '/images/CashProtector-logo.png';
 import bnbImg from '/images/bnb.jpeg';
 import burgerImg from '/images/beispiel-imbiss.jpeg';
+import camScriptImg from '/images/camscript-logo.png';
 
 interface Project {
     id: string;
@@ -19,6 +20,14 @@ interface Project {
 }
 
 const projects: Project[] = [
+    {
+        id: 'camscript',
+        title: 'CamScript',
+        descriptionKey: 'projects.camscript.desc',
+        image: camScriptImg,
+        url: 'https://oxadd1.github.io/CamScript-Website/',
+        type: 'app'
+    },
     {
         id: 'bitcoinscanner',
         title: 'Bitcoin Scanner',
