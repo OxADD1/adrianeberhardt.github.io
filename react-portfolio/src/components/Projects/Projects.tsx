@@ -7,7 +7,6 @@ import kaDataxImg from '/images/kadatax-preview.png';
 import reflectricImg from '/images/Reflectric-logo.png';
 import cashCounterImg from '/images/CashProtector-logo.png';
 import bnbImg from '/images/bnb.jpeg';
-import burgerImg from '/images/beispiel-imbiss.jpeg';
 import camScriptImg from '/images/camscript-logo.png';
 
 interface Project {
@@ -66,14 +65,6 @@ const projects: Project[] = [
         descriptionKey: 'projects.bnb.desc',
         image: bnbImg,
         url: 'https://chezmunalucien.com/',
-        type: 'website'
-    },
-    {
-        id: 'burger',
-        title: 'Burger Imbiss',
-        descriptionKey: 'projects.burger.desc',
-        image: burgerImg,
-        url: 'https://oxadd1.github.io/beispiel-imbiss/',
         type: 'website'
     }
 ];
