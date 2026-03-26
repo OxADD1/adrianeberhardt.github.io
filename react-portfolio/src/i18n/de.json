@@ -6,16 +6,16 @@
         "contact": "Kontakt"
     },
     "hero": {
-        "greeting": "Hi, ich bin",
-        "subtitle": "iOS-Entwickler • Web-Entwickler",
-        "cta": "Kontaktieren Sie mich"
+        "greeting": "Elegante Software & Apps von",
+        "subtitle": "Ich löse komplexe Probleme mit durchdachtem Code – mit Fokus auf Performance, saubere Architektur und intuitives UI/UX.",
+        "cta": "Projekte ansehen"
     },
     "expertise": {
         "title": "Expertise",
         "subtitle": "Maßgeschneiderte digitale Lösungen",
         "ios": {
             "title": "iOS-Entwicklung",
-            "desc": "Apps für iPhone, iPad und Mac – von der Konzeption über UI/UX bis zur Veröffentlichung im App Store, inklusive Testing und langfristiger Betreuung."
+            "desc": "Entwicklung nativer iOS-, iPadOS- & macOS-Anwendungen mit Swift & SwiftUI. Fokus auf saubere Softwarearchitektur, fließende Animationen und eine nahtlose Integration ins Apple-Ökosystem."
         },
         "web": {
             "title": "Webentwicklung",
@@ -49,8 +49,8 @@
         "visit_website": "Zur Website →"
     },
     "contact": {
-        "title": "Kontakt",
-        "subtitle": "Haben Sie Fragen? Kontaktieren Sie mich gerne!",
+        "title": "Lass uns vernetzen",
+        "subtitle": "Schreib mir unverbindlich auf WhatsApp oder per E-Mail!",
         "name": "Name",
         "phone": "Telefon",
         "address": "Adresse",

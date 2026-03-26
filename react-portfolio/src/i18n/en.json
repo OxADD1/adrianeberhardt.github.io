@@ -6,16 +6,16 @@
         "contact": "Contact"
     },
     "hero": {
-        "greeting": "Hi, I'm",
-        "subtitle": "iOS Developer • Web Developer",
-        "cta": "Contact me"
+        "greeting": "Elegant Software & Apps by",
+        "subtitle": "I solve complex problems with thoughtful code – focusing on performance, clean architecture, and intuitive UI/UX.",
+        "cta": "View Projects"
     },
     "expertise": {
         "title": "Expertise",
         "subtitle": "Tailored digital solutions",
         "ios": {
             "title": "iOS Development",
-            "desc": "Apps for iPhone, iPad and Mac – from concept to UI/UX to App Store release, including testing and long-term support."
+            "desc": "Building native iOS, iPadOS & macOS applications using Swift & SwiftUI. Focused on clean software architecture, fluid animations, and seamless Apple ecosystem integration."
         },
         "web": {
             "title": "Web Development",
@@ -49,8 +49,8 @@
         "visit_website": "Visit website →"
     },
     "contact": {
-        "title": "Contact",
-        "subtitle": "Have questions? Feel free to contact me!",
+        "title": "Let's connect",
+        "subtitle": "Feel free to message me on WhatsApp or via email!",
         "name": "Name",
         "phone": "Phone",
         "address": "Address",

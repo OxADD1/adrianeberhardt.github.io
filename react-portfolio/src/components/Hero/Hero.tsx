@@ -5,8 +5,8 @@ import './Hero.css';
 export default function Hero() {
     const { t } = useTranslation();
 
-    const scrollToContact = () => {
-        const element = document.querySelector('#contact');
+    const scrollToProjects = () => {
+        const element = document.querySelector('#projects');
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
@@ -17,10 +17,11 @@ export default function Hero() {
             <div className="hero-columns">
                 <div className="hero-content">
                     <h1 className="hero-greeting">
-                        <span>{t('hero.greeting')}</span> <span className="gradient-name">Adrian Eberhardt</span>
+                        <span style={{display: 'block', fontSize: '0.6em', marginBottom: '10px'}}>{t('hero.greeting')}</span> 
+                        <span className="gradient-name">Adrian Eberhardt</span>
                     </h1>
                     <p className="hero-role">{t('hero.subtitle')}</p>
-                    <button className="cta-button" onClick={scrollToContact}>
+                    <button className="cta-button" onClick={scrollToProjects}>
                         {t('hero.cta')}
                     </button>
                 </div>
